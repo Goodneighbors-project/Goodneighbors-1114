@@ -1,0 +1,177 @@
+#wrapper{
+    width: 100%;
+}
+
+header{
+    width: 100%;
+    height: 112.5px;
+    background-color: rgb(137, 162, 48);
+}
+
+.header-wrap{
+    width: 100%;
+    height: 110px;
+    padding-top: 15px;
+    background-color: white;
+}
+
+.header-group{
+    width: 1265px;
+    height: 110px;
+    margin: 0 auto;
+}
+
+.header-top{
+    width: 100%;
+    height: 20px;
+    margin-bottom: 12px;
+}
+
+.account-list{
+    padding-right: 10px;
+    display: flex;
+    justify-content: end;
+}
+
+.account-list li{
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.account-list li:nth-child(1){
+    width: 55px;
+    height: 16px;
+    text-align: left;
+}
+
+.account-list li:nth-child(2){
+    width: 75px;
+    height: 16px;
+    text-align: center;
+    border-left: 1px solid rgb(76, 76, 76);
+}
+
+.receipt-btn{
+    width: 92px;
+    height: 22px;
+    color: rgb(117, 170, 100);
+    text-decoration-color: rgb(117, 170, 100);
+    padding: 3px 7px;
+    border: 1px solid rgb(117, 170, 100);
+}
+
+.header-bottom{
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+nav{
+    width: 700px;
+    height: 63px;
+}
+
+.main-menu{
+    margin-top: 6px;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-menu > li{
+    width: 138px;
+    height: 22.5px;
+}
+
+.main-menu-btn{
+    display: block;
+    width: 100%;
+    padding: 10px 33px 27px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.menu-wrap{
+    width: 100%;
+    height: 368px;
+    position: absolute;
+    left: 0;
+    top: 111.5px;
+    z-index: 99;
+    font-size: 16px;
+    text-align: left;
+}
+
+.menu-wrap > li{
+    width: 100%;
+    height: 314px;
+    background-color: white;
+}
+
+.submenu{
+    margin: 30px 138px 0px 138px;
+    padding-left: 200px;
+}
+
+.submenu > li{
+    width: 1064px;
+    height: 286px;
+    padding: 0 15px;
+    display: flex;
+}
+
+.submenu-title{
+    font-weight: 600;
+    padding: 10px 0px;
+}
+
+.submenu-part{
+    padding-left: 15px;
+    width: 216px;
+    height: 280px;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: white;
+}
+
+.side-menu{
+    padding-left: 20px;
+    width: 410px;
+    height: 273px;
+    display: flex;
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
+
+
+
+
+.header-side{
+    width: 237px;
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.direct-donation-btn{
+    width: 184px;
+    height: 44px;
+    background-color: rgb(117, 170, 100);
+    border-radius: 30px;
+    color: white;
+    font-size: 17px;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
