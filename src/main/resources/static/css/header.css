@@ -10,7 +10,7 @@ header{
 
 .header-wrap{
     width: 100%;
-    height: 110px;
+    height: 111px;
     padding-top: 15px;
     background-color: white;
 }
@@ -62,7 +62,7 @@ header{
 
 .header-bottom{
     width: 100%;
-    height: 75px;
+    height: 64px;
     display: flex;
     justify-content: space-between;
 }
@@ -76,27 +76,36 @@ nav{
 .main-menu{
     margin-top: 6px;
     width: 100%;
-    height: 60px;
+    height: 57px;
     display: flex;
     justify-content: space-between;
 }
 
 .main-menu > li{
     width: 138px;
-    height: 22.5px;
+    height: 60px;
+    transition: ease-in-out 0.1s;
+}
+
+.main-menu > li:hover{
+    border-bottom: 7px solid rgb(117, 170, 100);
+}
+
+.main-menu > li > a{
+    text-align: center;
 }
 
 .main-menu-btn{
     display: block;
     width: 100%;
     padding: 10px 33px 27px;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 600;
 }
 
 .menu-wrap{
     width: 100%;
-    height: 368px;
+    height: auto;
     position: absolute;
     left: 0;
     top: 111.5px;
@@ -105,15 +114,21 @@ nav{
     text-align: left;
 }
 
-.menu-wrap > li{
+
+.menu-wrap-list{
     width: 100%;
-    height: 314px;
-    background-color: white;
+    height: 368px;
+    border-bottom: 2px solid rgb(117, 170, 100);
+    background-color: aqua;
+    display: none;
+    transition: ease-in-out 0.3s;
 }
 
+
 .submenu{
-    margin: 30px 138px 0px 138px;
-    padding-left: 200px;
+    margin: 0px 138px;
+    padding:30px 0px 0px 230px;
+    background-color: antiquewhite;
 }
 
 .submenu > li{
@@ -121,11 +136,7 @@ nav{
     height: 286px;
     padding: 0 15px;
     display: flex;
-}
-
-.submenu-title{
-    font-weight: 600;
-    padding: 10px 0px;
+    margin: 0 auto;
 }
 
 .submenu-part{
@@ -136,6 +147,15 @@ nav{
     background-color: white;
 }
 
+.submenu-title{
+    font-weight: 900;
+    padding: 10px 0px;
+}
+
+.submenu-part li{
+    padding: 10px 0px;
+}
+
 .side-menu{
     padding-left: 20px;
     width: 410px;
@@ -143,6 +163,12 @@ nav{
     display: flex;
     border-left: 1px solid rgba(0, 0, 0, 0.1);
     justify-content: space-between;
+}
+
+
+
+.submenu{
+    opacity: 0;
 }
 
 
