@@ -5,7 +5,14 @@
 header{
     width: 100%;
     height: 112.5px;
-    background-color: rgb(137, 162, 48);
+    overflow: hidden;
+    border-bottom: 2px solid rgb(117, 170, 100);
+    transition: height 0.4s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 999;
 }
 
 .header-wrap{
@@ -67,14 +74,13 @@ header{
     justify-content: space-between;
 }
 
-
 nav{
     width: 700px;
     height: 63px;
 }
 
 .main-menu{
-    margin-top: 6px;
+    padding-top: 6px;
     width: 100%;
     height: 57px;
     display: flex;
@@ -85,6 +91,11 @@ nav{
     width: 138px;
     height: 60px;
     transition: ease-in-out 0.1s;
+    position: relative;
+}
+
+.main-menu > li:nth-child(2){
+    position: relative;
 }
 
 .main-menu > li:hover{
@@ -92,6 +103,7 @@ nav{
 }
 
 .main-menu > li > a{
+    display: block;
     text-align: center;
 }
 
@@ -103,37 +115,53 @@ nav{
     font-weight: 600;
 }
 
+.main-menu > li:hover .menu-wrap{
+    display: block;
+}
+
+.main-menu > li:nth-child(1):hover .menu-wrap{
+    position: absolute;
+    left: -80px;
+}
+
+.main-menu > li:nth-child(2):hover .menu-wrap{
+    position: absolute;
+    left: -220.5px;
+}
+
+.main-menu > li:nth-child(3):hover .menu-wrap{
+    position: absolute;
+    left: -361px;
+}
+
+.main-menu > li:nth-child(4):hover .menu-wrap{
+    position: absolute;
+    left: -501.5px;
+}
+
+.main-menu > li:nth-child(5):hover .menu-wrap{
+    position: absolute;
+    left: -641.5px;
+}
+
 .menu-wrap{
     width: 100%;
-    height: auto;
-    position: absolute;
-    left: 0;
-    top: 111.5px;
-    z-index: 99;
+    height: 400px;
     font-size: 16px;
     text-align: left;
-}
-
-
-.menu-wrap-list{
-    width: 100%;
-    height: 368px;
-    border-bottom: 2px solid rgb(117, 170, 100);
-    background-color: aqua;
     display: none;
-    transition: ease-in-out 0.3s;
-}
 
+}
 
 .submenu{
-    margin: 0px 138px;
-    padding:30px 0px 0px 230px;
-    background-color: antiquewhite;
+    position: absolute;
+    top: 0;
+    padding-top: 30px;
 }
 
 .submenu > li{
     width: 1064px;
-    height: 286px;
+    height: 336px;
     padding: 0 15px;
     display: flex;
     margin: 0 auto;
@@ -147,14 +175,21 @@ nav{
     background-color: white;
 }
 
-.submenu-title{
+.submenu-part li{
+    padding: 7px 0px;
+    color: rgb(76, 76, 76);
+}
+
+.submenu-part .submenu-title{
     font-weight: 900;
     padding: 10px 0px;
 }
 
-.submenu-part li{
-    padding: 10px 0px;
+.submenu-part li a:hover{
+    color: rgb(117, 170, 100);
 }
+
+
 
 .side-menu{
     padding-left: 20px;
@@ -162,24 +197,34 @@ nav{
     height: 273px;
     display: flex;
     border-left: 1px solid rgba(0, 0, 0, 0.1);
-    justify-content: space-between;
 }
 
-
-
-.submenu{
-    opacity: 0;
+.side-menu li:first-child{
+    margin-right: 20px;
 }
 
+.side-menu-detail-btn{
+    display: block;
+    padding-top: 20px;
+    font-size: 14px;
+}
 
+.side-link{
+    width: 184px;
+    height: 190px;
+}
 
-
-
-
-
-
-
-
+.side-link li{
+    width: 182px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(76, 76, 76);
+    margin-bottom: 20px;
+    font-weight: 400;
+    cursor: pointer;
+}
 
 .header-side{
     width: 237px;
@@ -200,4 +245,10 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+section{
+    width: 100%;
+    height: 2000px;
+    background-color: antiquewhite;
 }

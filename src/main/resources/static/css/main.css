@@ -1,10 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+#wrapper{
+    width: 100%;
+}
 
-</body>
-</html>
+#container{
+    width: 100%;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    left: 0;
+}
+
+.slider-container{
+    width: 100%;
+    height: 600px;
+    position: absolute;
+    left: 0;
+}
+
+.slider-container.animated{
+    transition: left 0.3s ease-in;
+}
+
+.slide{
+    position: absolute;
+    width: 100%;
+    height: 600px;
+}
+
+.slide img{
+    width: 100%;
+    height: 600px;
+}
+
+.prev{
+    display: block;
+    z-index: 99;
+    width: 65px;
+    position: absolute;
+    top: 51%;
+}
+
+.prev img{
+    width: 100%;
+}
+
+.next{
+    display: block;
+    z-index: 99;
+    width: 65px;
+    position: absolute;
+    top: 51%;
+    right: 0.3%;
+}
+
+.next img{
+    width: 100%;
+}
+
+.prev.disabled, .next.disabled{
+    display: none;
+}
