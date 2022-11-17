@@ -5,11 +5,15 @@
 
 .login {
     padding: 92px 0 140px;
+    width: 100%;
+    height: 100%;
 }
 
 .login-index {
+    width: 100%;
+    height: 1190px;
     box-sizing: border-box;
-    background: url(/static/images/login_images/login-backgroud-img.jpg) no-repeat center/cover;
+    background: url(/static/images/account/login_images/login-backgroud-img.jpg) no-repeat center/cover;
 }
 
 .mw800 {
