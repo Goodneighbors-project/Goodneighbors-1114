@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>굿네이버스 공식 홈페이지 | 세상을 위한 좋은 변화, 굿네이버스</title>
+</head>
+<link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" href="/static/css/account/login.css">
+<body>
+    <section id="conteiner" class="login login-index">
+        <article class="mw800">
+            <div class="login-title">
+                <h3>로그인</h3>
+            </div>
+            <div class="login-box">
+                <div class="row1">
+                    <div class="top">
+                        <h6>좋은 이웃 회원님, 반갑습니다.</h6>
+                        <p>
+                            홈페이지 로그인을 통해, 나의 후원 정보 및 결연아동의 소식,
+                            <br>
+                            후원 중인 사업 내용, 회원 전용 이벤트 등 다양한 서비스를 이용해 보세요.
+                        </p>
+                    </div>
+                    <div class="bottom content-box">
+                        <div class="left">
+                            <form action="/account/login" name="login-form" id="login-form" class="write-form" method="post">
+                                <div class="form-group input-box">
+                                    <input type="text" id="username" class="form-control ime-false" placeholder="아이디" title="아이디를 입력하세요.">
+                                </div>
+                                <div class="form-group input-box">
+                                    <input type="text" id="password" class="form-control ime-false" placeholder="비밀번호" title="비밀번호를 입력하세요.">
+                                </div>
+                                <div class="ax-padding-box btn-wrap">
+                                    <button type="submit" class="btn btn-confirm btn-ga-send">로그인</button>
+                                </div>
+                                <div class="login-check">
+                                    <div class="check-box">
+                                        <div class="check">
+                                            <input type="checkbox" id="saveId">
+                                            <label for="saveId">아이디저장</label>
+                                        </div>
+                                    </div>
+                                    <div class="find-box">
+                                        <a href="/account/findid.gn">아이디</a>
+                                         / 
+                                        <a href="/account/findpwd.gn">비밀번호 찾기</a>
+                                        <i>|</i>
+                                        <a href="/account/register/join.gn">회원가입</a>
+                                    </div>
+                                </div>
+                                <div class="social-login-btn1">
+                                    <a href="" class="naver-btn btn-ga-send">
+                                        <img src="/static/images/login_images/i_naver.png"> 네이버 로그인</a>
+                                    <a href="" class="kakao-btn btn-ga-send">
+                                       <img src="/static/images/login_images/i_kakao.png"> 카카오 로그인</a>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="right">
+                            <figure>
+                                <a href="">
+                                    <img src="/static/images/login_images/login-right-img.jpg" alt="2021 굿네이버스 연차보고서">
+                                </a>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="row2 cf">
+                    <div class="left"> 
+                        <h6>
+                            " 후원회원인데"
+                            <br>
+                            " 아직 홈페이지 아이디기 없으세요? "
+                        </h6>
+                        <p>
+                            " 홈페이지에 가입하셔서,"
+                            <br>
+                            " 다양한 서비스를 편리하게 누려보세요."
+                        </p>
+                        <a href="/account/register" class="gtn btn-ga-send">홈페이지 ID 만들기</a>
+                    </div>
+                    <div class="right">
+                        <h6>
+                            " 행복한 세상을 함께 만드는"
+                            <br>
+                            " 다양한 나눔의 방법이 있습니다."
+                        </h6>
+                        <div class="btn-wrap">
+                            <a href="/supporter/donation" class="btn-supporter-join">후원참여하기</a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </article>
+    </section>
+</body>
+</html>

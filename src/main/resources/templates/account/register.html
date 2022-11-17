@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>굿네이버스 공식 홈페이지 | 세상을 위한 좋은 변화, 굿네이버스</title>
+</head>
+<link rel="stylesheet" href="/static/css/account/register.css">
+<body>
+    <section id="container" class="join join-step1">
+        <article class="join-cont">
+            <div class="join-title">
+                <h3>회원가입(홈페이지 ID 만들기)</h3>
+            </div>
+            <div class="join-box">
+                <div class="register-join-title">
+                    <h6>굿네이버스 홈페이지 가입을 환영합니다.</h6>
+                    <p>
+                        <span>홈페이지 회원가입은 굿네이버스 후원 신청 후</span> 가입이 가능합니다.
+                    </p>
+                </div>
+                <div class="member-cont">
+                    <form id="formJoin" name="formJoin" method="post" action="">
+                        <div class="base-info-box">
+                            <div class="info-box">
+                                <h3>기본정보</h3>
+                                <span class="important">표시는 반드시 입력하셔야 하는 항목입니다.</span>
+                            </div>
+                            <div class="base-info-sec">
+                                <table>
+                                    <colgroup>
+                                    <col width="25%">
+                                    <col width="75%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <th><span class="important">아이디</span></th>
+                                            <td>
+                                                <div class="member-warning member-username">
+                                                    <input type="text" id="username" name="mem-username">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><span class="important">비밀번호</span></th>
+                                            <td>
+                                                <div class="member-warning member-password">
+                                                    <input type="password" id="password" name="mem-password">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><span class="important">비민번호 확인</span></th>
+                                            <td>
+                                                <div class="member-warning member-passwordchk">
+                                                    <input type="password" id="passwordcheck" name="mem-passwordchk">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><span class="important">이름</span></th>
+                                            <td>
+                                                <div class="member-warning member-name">
+                                                    <input type="text" id="Name" name="mem-Name">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><span class="important">이메일</span></th>
+                                            <td>
+                                                <div class="member-warning member-email">
+                                                    <input type="emial" id="email" name="mem-email">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><span class="important">휴대폰번호</span></th>
+                                            <td>
+                                                <div class="member-warning member-phoneNumber">
+                                                    <input type="text" id="phoneNumber" name="mem-phoneNum">
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th><span class="important">주소</span></th>
+                                            <td>
+                                                <div class="address-postcode">
+                                                    <input type="text" id="zonecode" name="mem-zonecode">
+                                                    <button type="button" id="btn-Postcode" class="btn-postsearch">우편번호검색</button>
+                                                </div>
+                                                <div class="address-input">
+                                                    <div class="member-warning">
+                                                        <input type="text" name="address">
+                                                    </div>
+                                                    <div class="member-warning address-sub">
+                                                        <input type="text" name="addressSub" value>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="btn-center-box">
+                            <button type="button" id="btnCancel" class="btn-cancel">취소</button>
+                            <button type="button" class="btn-confirm btn-join">회원가입</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </article>
+    </section>
+</body>
+</html>

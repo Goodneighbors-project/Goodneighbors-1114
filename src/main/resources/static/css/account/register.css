@@ -1,0 +1,102 @@
+.join {
+    padding: 92px 0 140px;
+
+    background: #ECF3E6;
+}
+
+.join-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0 auto;
+    width: 743px;
+    border: none;
+}
+
+.join-title {
+    margin-bottom: 46px;
+    text-align: center;
+}
+
+.join-title h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.join-box {
+    padding: 28px 108px 80px;
+    background: #fff;
+}
+
+.register-join-title {
+    margin: 40px 0 42.5px;
+    text-align: center;
+}
+
+.register-join-title h6 {
+    margin-bottom: 7px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.register-join-title p {
+    font-size: 15px;
+    font-weight: 530;
+}
+
+.register-join-title p span {
+    font-weight: 600;
+    color: #89a230;
+}
+
+.member-cont h3 {
+    display: inline-block;
+    margin: 0 0;
+    padding: 0 0 17px 0;
+    height: 27px;
+    
+    font-weight: normal;
+    font-size: 18px;
+    color: #222222;
+}
+
+.member-cont .important {
+    background: url(/static/images/register/icon_dot_03.png) no-repeat 0 center;
+}
+
+.info-box {
+    width: 743px;
+}
+
+.info-box > span {
+    float: right;
+    padding: 0 0 0 10px;
+    line-height: 40px;
+
+    color: #ab3e55;
+}
+
+.base-info-sec {
+    border-top: 1px solid #999;
+    line-height: 40px;
+}
+
+.base-info-sec table {
+    width: 100%;
+}
+
+.base-info-sec table th {
+    text-align: left;
+    border-bottom: 1px solid #dcdcdc;
+    background: #fbfbfb;
+}
+
+.base-info-sec table th span {
+    padding: 0 0 0 10px;
+    margin: 0 0 0 -10px;
+}
+
+.base-info-sec table th:first-child {
+    border-left: none;
+}
