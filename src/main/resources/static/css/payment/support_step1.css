@@ -1,0 +1,174 @@
+body {
+    padding: 0;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-Vtit {
+    display: flex;
+    align-items: center;
+}
+
+.sub-tit {
+    margin: auto;
+    padding: 90px 52px 30px;
+    width: 1264px;
+
+    border-bottom: 1px solid #89a230;
+}
+
+.sub-tit h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #89a230;
+}
+
+.sub-visual {
+    width: 1264px;
+    margin: auto;
+    background: url(/static/images/pay-img/support_pc.jpg) no-repeat center;
+}
+
+.support-main-img {
+    display: table;
+    margin: auto;
+
+    width: 1264px;
+    height: 274px;
+}
+
+.support-pay .sub-content {
+    padding: 80px 0 0;
+}
+
+.step-sec {
+    text-align: center;
+    margin-bottom: 78px;
+}
+
+.step-Sequence {
+    width: 1048px;
+    margin: auto;
+}
+
+.step-sec .step-box {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.step-box .step {
+    padding: 0 70px;
+}
+
+.step span {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+}
+
+.step label {
+    display: inline-block;
+    margin: 14px 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+
+    background: #d7e1aa;
+    z-index: 1;
+}
+
+.active label {
+    background-color: #89a230;
+}
+
+.step h6 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.donate-selects {
+    width: 1048px;
+    margin: auto;
+}
+
+.support-donate-tit h6 {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #dcdcdc;
+    text-align: left;
+
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 21px;
+}
+
+.support-donate-tit h6 span {
+    margin: 15px;
+
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.donate-payInput {
+    padding-bottom: 28px;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.support-donate-table .row1 {
+    padding-top: 28px;
+}
+
+.donate-payInput .check-box {
+    line-height: 27px;
+}
+
+.check:last-child {
+    margin-right: 0;
+}
+
+.check input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+
+    cursor: pointer;
+}
+
+.check label {
+    position: relative;
+    top: -5px;
+
+    padding-left: 43px;
+    line-height: 27px;
+
+    font-size: 20px;
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+.support-donate-table .row2 {
+    display: flex;
+    padding-bottom: 28px;
+}
+
+.row2 h6 {
+    width: 108px;
+    line-height: 50px;
+    float: left;
+}
+
+.donate-pay-radio {
+    display: flex;
+    margin-right: 33px;
+    overflow: hidden;
+}
+
+.donate-pay-radio > div {
+    border: 1px solid #89a230;
+}
