@@ -13,6 +13,8 @@ for(let i = 0; i < targetLinks.length; i++){
         let originaTarget = e.target.getAttribute("href");
         let tabTarget = originaTarget.replace("#", "");
 
+        e.preventDefault();
+
         for(let j = 0; j < tabContents.length; j++){
             tabContents[j].style.visibility = "hidden";
         }
@@ -23,6 +25,7 @@ for(let i = 0; i < targetLinks.length; i++){
             targetLinks[j].classList.remove("active");
             e.target.classList.add("active");
         }
+
 
     });
 }
