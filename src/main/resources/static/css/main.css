@@ -4,7 +4,6 @@
 
 main{
     width: 100%;
-    height: 3500px;
 }
 
 /* 메인 이미지 */
@@ -291,7 +290,6 @@ col1 .img-box{
     width: 1280px;
     height: 143px;
     margin-bottom: 100px;
-    background-color: aqua;
 }
 
 .main-banner-image{
@@ -389,6 +387,7 @@ col1 .img-box{
     background-color: #cec8bf;
     display: flex;
     justify-content: space-between;
+    z-index: 100;
 }
 
 .main-result-bottom > div{
@@ -412,4 +411,237 @@ col1 .img-box{
     font-weight: 400;
     text-align: center;
     letter-spacing: 0.36px;
+}
+
+/* 메인 뉴스 */
+.main-news{
+    padding: 138px 0px 130px 0px;
+    width: 100%;
+    height: 768px;
+    background-color: white;
+    position: relative;
+    top: -59px;
+    z-index: -1;
+}
+
+.main-news-contents{
+    margin: 0 auto;
+    width: 1280px;
+    height: 550px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #969696;
+}
+
+.news-title-box{
+    width: 100%;
+    height: 110px;
+    padding-bottom: 60px;
+}
+
+.tit{
+    width: 100%;
+    height: 36px;
+    margin-bottom: 11px;
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.stxt{
+    width: 100%;
+    height: 19.2px;
+    color: rgb(85, 85, 85);
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.news-board{
+    width: 100%;
+    height: 433px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.new-group1{
+    width: 848px;
+    height: 408px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.new-group1 li{
+    width: 400px;
+    height: 408px;
+}
+
+.new-group1 li a{
+    display: block;
+    width: 100%;
+    height: 408px;
+}
+
+.new-img-wrab{
+    width: 100%;
+    height: 243px;
+}
+
+.new-img-wrab img{
+    width: 100%;
+}
+
+.news-txtbox{
+    width: 100%;
+    height: 133px;
+    padding-top: 22px;
+}
+
+.domestic-tag{
+    display: block;
+    width: 56.78px;
+    height: 24px;
+    margin-bottom: 10px;
+    border: 1px solid #969696;
+    color: rgb(150, 150, 150);
+    font-size: 14px;
+    text-align: center;
+    line-height: 24px;
+}
+
+.news-title{
+    width: 100%;
+    height: 60px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.news-group2{
+    width: 400px;
+    height: 408px;
+}
+
+.news-group2 li:not(:last-child){
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.news-group2 li a{
+    display: block;
+    width: 100%;
+    height: 140px;
+}
+
+.news-txtbox2{
+    width: 100%;
+    height: 140px;
+    padding-top: 22px;
+}
+
+.news-notice{
+    display: block;
+    width: 77.78px;
+    height: 24px;
+    margin-bottom: 10px;
+    border: 1px solid #969696;
+    color: rgb(150, 150, 150);
+    font-size: 14px;
+    text-align: center;
+    line-height: 24px;
+}
+
+/* 메인 비디오 */
+.main-video{
+    width: 100%;
+    height: 452px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.video-background{
+    position: absolute;
+    top: 88px;
+    width: 100%;
+    height: 374px;
+    background-color: #7d7474;
+    z-index: -1;
+}
+
+.video-wrap{
+    margin: 0 auto;
+    width: 1280px;
+    height: 452px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.poster{
+    width: 830px;
+    height: 452px;
+}
+
+.poster > iframe{
+    width: 100%;
+    height: 452px;
+}
+
+.video-txtbox{
+    width: 450px;
+    height: 452px;
+    padding: 146px 26px 52px 60px;
+}
+
+.video-tag{
+    display: block;
+    padding: 0px 5px;
+    width: 143px;
+    height: 28px;
+    border: 1px solid white;
+    color: white;
+    margin-bottom: 9px;
+    line-height: 28px;
+}
+
+.video-txtbox > h6{
+    width: 519px;
+    height: 36px;
+    margin-bottom: 30px;
+    color: white;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.video-txtbox > p{
+    width: 364px;
+    height: 78px;
+    margin-bottom: 30px;
+    color: white;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 26px;
+} 
+
+.video-btn-group{
+    width: 364px;
+    height: 46px;
+    display: flex;
+}
+
+.video-btn-group > a{
+    display: block;
+    width: 127.4px;
+    height: 46px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 600;
+    line-height: 46px;
+}
+
+.video-more-btn{
+    background-color: white;
+    color: black;
+    margin-right: 20px;
+}
+
+.video-donation-btn{
+    background-color: rgb(144, 175, 42);
+    color: white;
 }
