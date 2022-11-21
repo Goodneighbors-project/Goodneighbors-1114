@@ -2,16 +2,18 @@ body {
     padding: 0;
 }
 
+#wrapper {
+    width: 100%;
+    height: 100%;
+}
+
 #container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    width: 1264px;
+    margin: 0 auto;
 }
 
 .sub-Vtit {
-    display: flex;
-    align-items: center;
+    text-align: left;
 }
 
 .sub-tit {
@@ -35,9 +37,7 @@ body {
 }
 
 .support-main-img {
-    display: table;
     margin: auto;
-
     width: 1264px;
     height: 274px;
 }
@@ -59,10 +59,10 @@ body {
 .step-sec .step-box {
     display: flex;
     justify-content: center;
-    position: relative;
 }
 
 .step-box .step {
+    width: 333px;
     padding: 0 70px;
 }
 
@@ -82,6 +82,17 @@ body {
 
     background: #d7e1aa;
     z-index: 1;
+}
+
+.step-line {
+    position: relative;
+    top: -48px;
+    margin: 0 auto;
+    width: 663px;
+    height: 1px;
+
+    z-index: -1;
+    background: #d7e1aa;
 }
 
 .active label {
@@ -164,11 +175,94 @@ body {
 }
 
 .donate-pay-radio {
-    display: flex;
     margin-right: 33px;
     overflow: hidden;
 }
 
 .donate-pay-radio > div {
+    float: left;
     border: 1px solid #89a230;
+}
+
+.donate-pay-radio > div input[type='radio'] {
+    display: none;
+    position: absolute;
+    z-index: -1;
+    margin-top: 10px;
+}
+
+.donate-pay-radio > div input[type='radio']:checked ~ label {
+    border: 2px solid #89a230;
+
+    font-weight: 800;
+    color: #89a230;
+    background: #fff;
+}
+
+.donate-pay-radio > div label {
+    display: inline-block;
+    width: 102px;
+    height: 50px;
+    line-height: 50px;
+
+    font-weight: 700;
+    text-align: center;
+
+    cursor: pointer;
+}
+
+.support-donate-table .row2 > div {
+    float: left;
+}
+
+.row2 h6 {
+    width: 108px;
+    line-height: 50px;
+    font-size: 100%;
+}
+
+.donate-pay-input {
+    padding-right: 16px;
+    width: 183px;
+    height: 50px;
+    border: 1px solid #dcdcdc;
+    overflow: hidden;
+}
+
+.donate-pay-input input {
+    width: 134px;
+    height: 48px;
+    border: none;
+
+    font-size: 16px;
+    text-indent: 10px;
+}
+
+.input-box input[type='number']::-webkit-outer-spin-button,
+.input-box input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.donate-pay-input label {
+    float: right;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 46px;
+}
+
+.donate-pay-sinfo {
+    margin-left: 33px;
+
+    font-size: 14px;
+    line-height: 50px;
+    color: #666666;
+}
+
+.donate-pay-total {
+    float: right;
+
+    text-align: right;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 50px;
 }
