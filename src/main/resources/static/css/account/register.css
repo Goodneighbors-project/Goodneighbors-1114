@@ -1,30 +1,51 @@
 .join {
-    padding: 92px 0 140px;
+    width: 100%;
+    padding-bottom: 40px;
 
-    background: #ECF3E6;
+    background: #ffffff;
 }
 
 .join-cont {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
     margin: 0 auto;
-    width: 743px;
+    width: 100%;
     border: none;
 }
 
-.join-title {
+.title-wrapper {
+    width: 100%;
+    height: 200px;
     margin-bottom: 46px;
+    padding: 0 20px;
+
+    background-color: #89a230;
+    color: white;
     text-align: center;
 }
 
+.join-title {
+    margin: 0 auto;
+
+    padding: 50px 108px 0 108px;
+    width: 783px;
+    height: 200px;
+    text-align: left;
+}
+
 .join-title h3 {
-    font-size: 24px;
+    margin-bottom: 15px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.join-title h6 {
+    margin-bottom: 7px;
+    font-size: 20px;
     font-weight: 600;
 }
 
 .join-box {
+    width: 783px;
+    margin: 0 auto;
     padding: 28px 108px 80px;
     background: #fff;
 }
@@ -34,11 +55,6 @@
     text-align: center;
 }
 
-.register-join-title h6 {
-    margin-bottom: 7px;
-    font-size: 18px;
-    font-weight: 600;
-}
 
 .register-join-title p {
     font-size: 15px;
@@ -66,15 +82,32 @@
 }
 
 .info-box {
-    width: 743px;
+    display: flex;
+    justify-content: space-between;
+    width: 527px;
 }
 
-.info-box > span {
+.imp-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imp-box img {
     position: relative;
-    top: -3px;
+    top: 9px;
+
+    width: 4px;
+    height: 4px;
+}
+
+.imp-box > span {
+    position: relative;
     float: right;
     padding: 0 0 0 10px;
-    line-height: 40px;
+    height: 30px;
+
+    line-height: 50px;
 
     color: #ab3e55;
 }
@@ -91,14 +124,14 @@
 }
 
 .base-info-sec table th {
-    padding: 10px 25px;
+    padding: 10px 10px;
     text-align: left;
     border-bottom: 1px solid #dcdcdc;
     background: #fbfbfb;
 }
 
 .base-info-sec table th span {
-    padding: 0 0 0 10px;
+    padding: 0 0 0 7px;
     margin: 0 0 0 -10px;
 }
 
@@ -138,7 +171,7 @@
 }
 
 .member-warning {
-    display: inline;
+    display: flex;
     position: relative;
 }
 
@@ -147,6 +180,7 @@
 }
 
 .member-email select {
+    margin-left: 5px;
     padding: 0 0 0 8px;
     height: 31px;
     width: 125px;
@@ -245,13 +279,13 @@
 }
 
 .btn-center-box .btn-join {
-    border: 1px solid #ECF3E6;
+    border: 1px solid #cccccc;
     color: #3e3e3e;
-    background: #ECF3E6;
+    background: #fff;
 }
 
 .btn-center-box .btn-join:hover {
-    border: 1px solid #d3eebcbe;
-    color: #222222;
-    background: #d3eebcbe;
+    border: 1px solid #cccccc;
+    color: white;
+    background: rgb(144, 175, 42);;
 }

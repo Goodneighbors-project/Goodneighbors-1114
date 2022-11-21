@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>굿네이버스 공식 홈페이지 | 세상을 위한 좋은 변화, 굿네이버스</title>
 </head>
-<link rel="stylesheet" href="/static/css/header.css">
 <link rel="stylesheet" href="/static/css/style.css">
+<link rel="stylesheet" href="/static/css/header.css">
+<link rel="stylesheet" href="/static/css/footer.css">
 <link rel="stylesheet" href="/static/css/account/register.css">
 <body>
     <div id="wrapper">
@@ -16,8 +17,8 @@
             <div class="header-group">
                 <div class="header-top">
                     <ul class="account-list">
-                        <li><a href="#">로그인</a></li>
-                        <li><a href="#">회원가입</a></li>
+                        <li><a href="/account/login">로그인</a></li>
+                        <li><a href="/account/register">회원가입</a></li>
                         <li><a class="receipt-btn" href="#">기부금 영수증</a></li>
                     </ul>
                 </div>
@@ -253,22 +254,22 @@
     </header>
     <section id="container" class="join join-step1">
         <article class="join-cont">
-            <div class="join-title">
-                <h3>회원가입(홈페이지 ID 만들기)</h3>
+            <div class="title-wrapper">
+                <div class="join-title">
+                    <h3>회원가입</h3>
+                    <h6>굿네이버스 홈페이지 가입을 환영합니다.</h6>
+                </div>
             </div>
             <div class="join-box">
-                <div class="register-join-title">
-                    <h6>굿네이버스 홈페이지 가입을 환영합니다.</h6>
-                    <p>
-                        <span>홈페이지 회원가입은 굿네이버스 후원 신청 후</span> 가입이 가능합니다.
-                    </p>
-                </div>
                 <div class="member-cont">
                     <form id="formJoin" name="formJoin" method="post" action="">
                         <div class="base-info-box">
                             <div class="info-box">
                                 <h3>기본정보</h3>
-                                <span class="important">표시는 반드시 입력하셔야 하는 항목입니다.</span>
+                                <div class="imp-box">
+                                    <img src="/static/images/account/register-img/icon_dot_03.png">
+                                    <span class="important">표시는 반드시 입력하셔야 하는 항목입니다.</span>
+                                </div>
                             </div>
                             <div class="base-info-sec">
                                 <table>
@@ -278,7 +279,8 @@
                                     </colgroup>
                                     <tbody>
                                         <tr>
-                                            <th><span class="important">아이디</span></th>
+                                            <th>
+                                                <span class="important">아이디</span></th>
                                             <td>
                                                 <div class="member-warning member-username">
                                                     <input type="text" id="username" name="mem-username">
@@ -377,7 +379,89 @@
             </div>
         </article>
     </section>
+    <!-- footer -->
+    <footer>
+        <!-- footer 사이트 내 링크 -->
+        <section class="gni-link">
+            <ul class="footer-link-list">
+                <li>
+                    <a href="#">
+                        <img src="/static/images/footer/guide-btn.png" alt="">
+                        <span>후원가이드</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/static/images/footer/letter-btn.png" alt="">
+                        <span>희망편지쓰기</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/static/images/footer/club-join-btn.png" alt="">
+                        <span>더네이버스클럽</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/static/images/footer/market-btn.png" alt="">
+                        <span>좋은이웃가게</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="/static/images/footer/corp-donation-btn.png" alt="">
+                        <span>기업후원</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- footer 회사정보 -->
+        <section class="footer-info">
+            <div class="footer-info-group">
+                <div>
+                    <p>서울 영등포구 버드나루로 13 굿네이버스회관</p>
+                    <p>사단법인 굿네이버스 인터내셔날 | 사업자등록번호 105-82-13183 | 대표자 이일하</p>
+                    <p>사회복지법인 굿네이버스 | 사업자등록번호 105-82-10319 | 대표자 이호균</p>
+                </div>
+                <div>
+                    <p>회원상담센터 1544-7944</p>
+                    <p>대표전화 02-6717-4000</p>
+                    <p>Copyright © GNI all right reserved</p>
+                </div>
+                <a href="#"><img src="/static/images/footer/Logo_small.png" alt=""></a>
+            </div>
+        </section>
+        <!-- footer 약관, sns버튼 -->
+        <section class="footer-bottom-wrap">
+            <div class="footer-bottom">
+                <ul class="footer-bottom-list">
+                    <li><a href="#">이용약관</a></li>
+                    <li><a href="#">개인정보처리방침</a></li>
+                    <li><a href="#">이메일무단수집거부</a></li>
+                    <li><a href="#">인재채용</a></li>
+                    <li><a href="#">후원문의</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">사이트맵</a></li>
+                    <li><a href="#">브랜드가이드라인</a></li>
+                    <li><a href="#">세이프가딩정책</a></li>
+                </ul>
+                <ul class="sns-group">
+                    <li><a href="#"><img src="/static/images/footer/sns/kakaofriend.png"><span>카카오톡 친구추가</span></a></li>
+                    <li><a href="#"><img src="/static/images/footer/sns/instagram.png"></a></li>
+                    <li><a href="#"><img src="/static/images/footer/sns/facebook.png"></a></li>
+                    <li><a href="#"><img src="/static/images/footer/sns/twitter.png"></a></li>
+                    <li><a href="#"><img src="/static/images/footer/sns/blog.png"></a></li>
+                    <li><a href="#"><img src="/static/images/footer/sns/kakaostory.png"></a></li>
+                    <li><a href="#"><img src="/static/images/footer/sns/youtube_link_btn.png"></a></li>
+                </ul>
+            </div>
+        </section>
+    </footer>
 </div>
-<script src="/static/js/header.js"></script>
+    <script src="/static/js/header.js"></script>
+    <script src="/static/js/main-slide.js"></script>
+    <script src="/static/js/main-tap.js"></script>
 </body>
 </html>
