@@ -84,11 +84,6 @@
     line-height: 40px;
 }
 
-.base-info-sec .error-message {
-    padding-top: 5px;
-    color: #ab3e55;
-}
-
 .base-info-sec table {
     width: 100%;
     border: 0;
@@ -120,6 +115,12 @@
     font-family: Malgun Gothic, "막은 고딕";
     color: #333;
 }
+
+.base-info-sec .error-message {
+    padding-top: 5px;
+    color: #ab3e55;
+}
+
 
 .base-info-sec table input[type="text"], input[type="password"] {
     padding: 0 10px;
