@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/header.css">
     <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
 </head>
 <body>
     <div id="wrapper">
+        <!-- header -->
         <header>
             <div class="header-wrap">
                 <div class="header-group">
@@ -251,7 +253,10 @@
                 </div>
             </div>
         </header>
+
+        <!-- main -->
         <main>
+            <!-- main 이미지 -->
             <section id="container">
                 <ul class="slider-container">
                     <li class="slide">
@@ -270,41 +275,36 @@
                 <a href="#" class="prev"><img src="/static/images/main_image/main-left_btn.png"></a>
                 <a href="#" class="next"><img src="/static/images/main_image/main-rigth-btn.png"></a>
             </section>
+            <!-- main 스토리캐스트 -->
             <section id="main-storycast">
                 <article class="storycast-contents">
-                    <div class="title_box">
+                    <div class="title-box">
                         <h3 class="title">스토리</h3>
                         <p class="short-txt">
                             세상을 위한 좋은 변화, 더불어 살아가는 이야기가 함께 합니다.
                         </p>
                     </div>
-                    <a class="more_btn" href="#"><img src="/static/images/main_image/plus_btn3.png" alt=""></a>
-                    <ul class="tab_area">
-                        <li class="on" rel="tab1">
-                            <a href="javascript:void(0);">
-                                #지금 뜨는 이야기
-                            </a>
+                    <a class="more-btn" href="#"><img src="/static/images/main_image/plus_btn3.png" alt=""></a>
+                    <ul class="tab-area">
+                        <li>
+                            <a href="#tabs-1" class="active">#지금 뜨는 이야기</a>
                         </li>
-                        <li class="on" rel="tab2">
-                            <a href="javascript:void(0);">
-                                #결과보고
-                            </a>
+                        <li>
+                            <a href="#tabs-2">#결과보고</a>
                         </li>
-                        <li class="on" rel="tab3">
-                            <a href="javascript:void(0);">
-                                #좋은이웃이야기
-                            </a>
+                        <li>
+                            <a href="#tabs-3">#좋은이웃이야기</a>
                         </li>
                     </ul>
                     <div class="tab">
-                        <div class="tab1 cf" style="display:block;">
+                        <div id="tabs-1" class="tab1 cf">
                             <div class="col1">
-                                <div class="row1 box">
-                                    <a href="/story/storycast/2784/view.gn" class="btn_ga_send">
-                                        <figure class="img_box">
+                                <div class="row1">
+                                    <a href="/story/storycast/2784/view.gn" class="btn-ga-send">
+                                        <figure class="img-box">
                                             <img src="https://cdn.gni.kr/banner/202211/27LyDxG1V.jpg" alt="편지쓰기대회/그림그리기대회 우수작 전시회에 초대합니다💌 (feat. 라멕의 모험)">
                                         </figure>
-                                        <div class="txt_box">
+                                        <div class="txt-box">
                                             <h6>편지쓰기대회/그림그리기대회 우수작<br>전시회에 초대합니다💌 (feat. 라멕의 모험)</h6>
                                             <span>더 알아보기</span>
                                         </div>
@@ -313,177 +313,164 @@
                             </div>
                             <div class="col2">
                                 <div class="row1 box">    
-                                    <a href="/story/storycast/2780/view.gn" class="btn_ga_send">
-                                        <figure class="img_box">
+                                    <a href="/story/storycast/2780/view.gn" class="btn-ga-send">
+                                        <figure class="img-box">
                                             <img src="https://cdn.gni.kr/banner/202210/YzxQr93Wq.png" alt="아이들 마음에 '톡톡', 아이들 마음이 '튼튼'">
                                         </figure>
-                                        <div class="txt_box">
+                                        <div class="txt-box">
                                             <h6>아이들 마음에 '톡톡',<br>아이들 마음이 '튼튼'</h6>
-                                            <span>더 알아보기</span>
                                         </div>        
                                     </a>
                                 </div>
                                 <div class="row2 box">
-                                    <a href="/story/storycast/2781/view.gn" class="btn_ga_send">
-                                        <figure class="img_box">
+                                    <a href="/story/storycast/2781/view.gn" class="btn-ga-send">
+                                        <figure class="img-box">
                                             <img src="https://cdn.gni.kr/banner/202211/01rJP315x.jpg" alt="굿네이버스 X 현대자동차 부릉🚙 LAMPU car 출동!">
                                         </figure>
-                                        <div class="txt_box">
+                                        <div class="txt-box">
                                             <h6>굿네이버스 X 현대자동차<br>부릉🚙 LAMPU car 출동!</h6>
-                                            <span>더 알아보기</span>
                                         </div>         
                                     </a>
                                 </div>
                                 <div class="row3 box">
-                                    <a href="/story/storycast/2773/view.gn" class="btn_ga_send">
-                                        <figure class="img_box">
+                                    <a href="/story/storycast/2773/view.gn" class="btn-ga-send">
+                                        <figure class="img-box">
                                             <img src="https://cdn.gni.kr/banner/202210/vwVDygv0M.png" alt="아동권리가 보장되는 메타버스를 만나고 싶어요!">
                                         </figure>
-                                        <div class="txt_box">
+                                        <div class="txt-box">
                                             <h6>아동권리가 보장되는<br>메타버스를 만나고 싶어요!</h6>
-                                            <span>더 알아보기</span>
                                         </div>                  
                                     </a>
                                 </div>
                                 <div class="row4 box">
-                                    <a href="/story/feedback/146/view.gn" class="btn_ga_send" data-alt-a="메인콘텐츠" data-alt-b="지금뜨는이야기" data-alt-c="달라진 열세 살 상우의 삼시 세끼<br />">
-                                        <figure class="img_box">
+                                    <a href="/story/feedback/146/view.gn" class="btn-ga-send" data-alt-a="메인콘텐츠" data-alt-b="지금뜨는이야기" data-alt-c="달라진 열세 살 상우의 삼시 세끼<br />">
+                                        <figure class="img-box">
                                             <img src="https://cdn.gni.kr/banner/202210/8ZpBBpNgV.jpg" alt="달라진 열세 살 상우의 삼시 세끼">
                                         </figure>
-                                        <div class="txt_box">
+                                        <div class="txt-box">
                                             <h6>달라진 열세 살 상우의 삼시 세끼<br></h6>
-                                            <span>더 알아보기</span>
                                         </div>     
                                     </a>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="tab2 cf" style="display: none;">
-                        <div class="col1">
-                            <div class="row1 box">
-                                <a href="https://www.goodneighbors.kr/annual_report/2021/international.gn" class="btn_ga_send">
-                                    <figure class="img_box">
-                                        <img src="https://cdn.gni.kr/banner/202205/BWEzpL481.jpg" alt="2021 굿네이버스 연차보고서">
-                                    </figure>
-                                    <div class="txt_box">
-                                        <h6>2021 굿네이버스 연차보고서</h6>
-                                        <span>더 알아보기</span>
-                                    </div>   
-                                </a>
+                        <div id="tabs-2" class="tab2 cf">
+                            <div class="col1">
+                                <div class="row1">
+                                    <a href="https://www.goodneighbors.kr/annual_report/2021/international.gn" class="btn-ga-send">
+                                        <figure class="img-box">
+                                            <img src="https://cdn.gni.kr/banner/202205/BWEzpL481.jpg" alt="2021 굿네이버스 연차보고서">
+                                        </figure>
+                                        <div class="txt-box">
+                                            <h6>2021 굿네이버스 연차보고서</h6>
+
+                                        </div>   
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col2">
+                                <div class="row1 box">
+                                    <a href="/story/feedback/146/view.gn" class="btn-ga-send">
+                                        <figure class="img-box">
+                                            <img src="https://cdn.gni.kr/banner/202210/9K0YYr1K1.jpg" alt="달라진 열세 살 상우의 삼시 세끼">
+                                        </figure>
+                                        <div class="txt-box">
+                                            <h6>달라진 열세 살 상우의 삼시 세끼</h6>
+                                        </div>   
+                                    </a>
+                                </div>
+                                <div class="row2 box">
+                                    <a href="/story/feedback/145/view.gn" class="btn-ga-send">
+                                        <figure class="img-box">
+                                            <img src="https://cdn.gni.kr/banner/202209/6kVMKkrJR.jpg" alt="행복한 변화가 찾아온 은우, 우빈이네">
+                                        </figure>
+                                        <div class="txt-box">
+                                            <h6>행복한 변화가 찾아온 은우, 우빈이네</h6>
+                                        </div> 
+                                    </a>
+                                </div>
+                                <div class="row3 box">
+                                    <a href="/story/feedback/140/view.gn" class="btn-ga-send">
+                                        <figure class="img-box">
+                                            <img src="https://cdn.gni.kr/banner/202208/1d8evXO1B.jpg" alt="사랑둥이 훈이와 할머니가 전하는 기쁜소식">
+                                        </figure>
+                                        <div class="txt-box">
+                                            <h6>사랑둥이 훈이와 할머니가 전하는 기쁜소식</h6>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="row4 box">
+                                    <a href="/story/storycast/2768/view.gn" class="btn-ga-send">
+                                        <figure class="img-box">
+                                            <img src="https://cdn.gni.kr/banner/202210/xmYpGaj5G.jpg" alt="아이들을 지키는 '기후 골든타임'">
+                                        </figure>
+                                        <div class="txt-box">
+                                            <h6>아이들을 지키는 '기후 골든타임'</h6>
+                                        </div> 
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                        <div class="col2">
-                            <div class="row1 box">
-                                <a href="/story/feedback/146/view.gn" class="btn_ga_send">
-                                    <figure class="img_box">
-                                        <img src="https://cdn.gni.kr/banner/202210/9K0YYr1K1.jpg" alt="달라진 열세 살 상우의 삼시 세끼">
-                                    </figure>
-                                    <div class="txt_box">
-                                        <h6>달라진 열세 살 상우의 삼시 세끼</h6>
-                                        <span>더 알아보기</span>
-                                    </div>   
-                                </a>
+                        <div id="tabs-3" class="tab3 cf">
+                            <div class="col1">
+                                <div class="row1">                    
+                                    <a href="/story/storycast/2785/view.gn" class="btn-ga-send" data-alt-a="메인콘텐츠" data-alt-b="좋은이웃이야기" data-alt-c="아이들을 지키는 SNS 히어로!<br />굿히어로 3기 대활약상을 공개합니다">
+                                        <figure class="img-box">
+                                            <img src="https://cdn.gni.kr/banner/202211/qqLRBrBgx.jpg" alt="아이들을 지키는 SNS 히어로! 굿히어로 3기 대활약상을 공개합니다">
+                                        </figure>
+                                        <div class="txt-box">
+                                            <h6>아이들을 지키는 SNS 히어로!<br>굿히어로 3기 대활약상을 공개합니다</h6>
+                                            <span>더 알아보기</span>
+                                        </div> 
+                                    </a>
+                                </div>
                             </div>
-                            <div class="row2 box">
-                                <a href="/story/feedback/145/view.gn" class="btn_ga_send">
-                                    <figure class="img_box">
-                                        <img src="https://cdn.gni.kr/banner/202209/6kVMKkrJR.jpg" alt="행복한 변화가 찾아온 은우, 우빈이네">
-                                    </figure>
-                                    <div class="txt_box">
-                                        <h6>행복한 변화가 찾아온 은우, 우빈이네</h6>
-                                        <span>더 알아보기</span>
-                                    </div> 
-                                </a>
-                            </div>
-                            <div class="row3 box">
-                                <a href="/story/feedback/140/view.gn" class="btn_ga_send">
-                                    <figure class="img_box">
-                                        <img src="https://cdn.gni.kr/banner/202208/1d8evXO1B.jpg" alt="사랑둥이 훈이와 할머니가 전하는 기쁜소식">
-                                    </figure>
-                                    <div class="txt_box">
-                                        <h6>사랑둥이 훈이와 할머니가 전하는 기쁜소식</h6>
-                                        <span>더 알아보기</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="row4 box">
-                                <a href="/story/storycast/2768/view.gn" class="btn_ga_send">
-                                    <figure class="img_box">
-                                        <img src="https://cdn.gni.kr/banner/202210/xmYpGaj5G.jpg" alt="아이들을 지키는 '기후 골든타임'">
-                                    </figure>
-                                    <div class="txt_box">
-                                        <h6>아이들을 지키는 '기후 골든타임'</h6>
-                                        <span>더 알아보기</span>
-                                    </div> 
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab3 cf" style="display: none;">
-                        <div class="col1">
-                            <div class="row1 box">                    
-                                <a href="/story/storycast/2785/view.gn" class="btn_ga_send" data-alt-a="메인콘텐츠" data-alt-b="좋은이웃이야기" data-alt-c="아이들을 지키는 SNS 히어로!<br />굿히어로 3기 대활약상을 공개합니다">
-                                    <figure class="img_box">
-                                        <img src="https://cdn.gni.kr/banner/202211/qqLRBrBgx.jpg" alt="아이들을 지키는 SNS 히어로! 굿히어로 3기 대활약상을 공개합니다">
-                                    </figure>
-                                    <div class="txt_box">
-                                        <h6>아이들을 지키는 SNS 히어로!<br>굿히어로 3기 대활약상을 공개합니다</h6>
-                                        <span>더 알아보기</span>
-                                    </div> 
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col2">
-                            <div class="row1 box">
-                                <a href="/story/storycast/2757/view.gn" class="btn_ga_send" data-alt-a="메인콘텐츠" data-alt-b="좋은이웃이야기" data-alt-c="커피 한 잔처럼<br />따뜻한 나눔의 영향력">
-                                    <figure class="img_box">
-                                        <img src="https://cdn.gni.kr/banner/202209/R4Kjrnblz.jpg" alt="커피 한 잔처럼 따뜻한 나눔의 영향력">
-                                    </figure>
-                                    <div class="txt_box">
-                                        <h6>커피 한 잔처럼<br>따뜻한 나눔의 영향력</h6>
-                                        <span>더 알아보기</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="row2 box">
-                                <a href="/story/storycast/2700/view.gn" class="btn_ga_send" data-alt-a="메인콘텐츠" data-alt-b="좋은이웃이야기" data-alt-c="소중한 기념일에 따뜻한 나눔이 더해지면?">
-                                    <figure class="img_box">
-                                        <img src="https://cdn.gni.kr/banner/202205/xenG084d8.jpg" alt="소중한 기념일에 따뜻한 나눔이 더해지면?">
-                                    </figure>
-                                    <div class="txt_box">
-                                        <h6>소중한 기념일에 따뜻한 나눔이 더해지면?</h6>
-                                        <span>더 알아보기</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="row3 box">
-                                <a href="/app/online_event/2022/11/child_event.gn" class="btn_ga_send" data-alt-a="메인콘텐츠" data-alt-b="좋은이웃이야기" data-alt-c="소소하게 통한다! 소통이 필요해~">
-                                    <figure class="img_box">
-                                        <img src="https://cdn.gni.kr/banner/202211/E8YAYqBPz.png" alt="소소하게 통한다! 소통이 필요해~">
-                                    </figure>
-                                    <div class="txt_box">
-                                        <h6>소소하게 통한다! 소통이 필요해~</h6>
-                                        <span>더 알아보기</span>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="row4 box">
-                                <a href="/story/storycast/2745/view.gn" class="btn_ga_send" data-alt-a="메인콘텐츠" data-alt-b="좋은이웃이야기" data-alt-c="재능부자 '김윤미 작가'의<br />조금 특별한 나눔 이야기">
-                                    <figure class="img_box">
-                                        <img src="https://cdn.gni.kr/banner/202210/wBMEDx7nX.jpg" alt="재능부자 '김윤미 작가'의 조금 특별한 나눔 이야기">
-                                    </figure>
-                                    <div class="txt_box">
-                                        <h6>재능부자 '김윤미 작가'의<br>조금 특별한 나눔 이야기</h6>
-                                        <span>더 알아보기</span>
-                                    </div>
-                                </a>
+                            <div class="col2">
+                                <div class="row1 box">
+                                    <a href="/story/storycast/2757/view.gn" class="btn-ga-send" data-alt-a="메인콘텐츠" data-alt-b="좋은이웃이야기" data-alt-c="커피 한 잔처럼<br />따뜻한 나눔의 영향력">
+                                        <figure class="img-box">
+                                            <img src="https://cdn.gni.kr/banner/202209/R4Kjrnblz.jpg" alt="커피 한 잔처럼 따뜻한 나눔의 영향력">
+                                        </figure>
+                                        <div class="txt-box">
+                                            <h6>커피 한 잔처럼<br>따뜻한 나눔의 영향력</h6>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="row2 box">
+                                    <a href="/story/storycast/2700/view.gn" class="btn-ga-send" data-alt-a="메인콘텐츠" data-alt-b="좋은이웃이야기" data-alt-c="소중한 기념일에 따뜻한 나눔이 더해지면?">
+                                        <figure class="img-box">
+                                            <img src="https://cdn.gni.kr/banner/202205/xenG084d8.jpg" alt="소중한 기념일에 따뜻한 나눔이 더해지면?">
+                                        </figure>
+                                        <div class="txt-box">
+                                            <h6>소중한 기념일에 따뜻한 나눔이 더해지면?</h6>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="row3 box">
+                                    <a href="/app/online_event/2022/11/child_event.gn" class="btn-ga-send" data-alt-a="메인콘텐츠" data-alt-b="좋은이웃이야기" data-alt-c="소소하게 통한다! 소통이 필요해~">
+                                        <figure class="img-box">
+                                            <img src="https://cdn.gni.kr/banner/202211/E8YAYqBPz.png" alt="소소하게 통한다! 소통이 필요해~">
+                                        </figure>
+                                        <div class="txt-box">
+                                            <h6>소소하게 통한다! 소통이 필요해~</h6>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="row4 box">
+                                    <a href="/story/storycast/2745/view.gn" class="btn-ga-send" data-alt-a="메인콘텐츠" data-alt-b="좋은이웃이야기" data-alt-c="재능부자 '김윤미 작가'의<br />조금 특별한 나눔 이야기">
+                                        <figure class="img-box">
+                                            <img src="https://cdn.gni.kr/banner/202210/wBMEDx7nX.jpg" alt="재능부자 '김윤미 작가'의 조금 특별한 나눔 이야기">
+                                        </figure>
+                                        <div class="txt-box">
+                                            <h6>재능부자 '김윤미 작가'의<br>조금 특별한 나눔 이야기</h6>
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </article>
             </section>
-
             <!-- main 배너 -->
             <section class="main-banner">
                 <a class="main-banner-image" href="#"><img src="/static/images/main_image/main-banner.png" alt=""></a>
@@ -520,7 +507,7 @@
                             <div>
                                 <h6>한국 NGO  최초<br>유엔세계식량계획(WFP)<br>파트너기관 선정</h6>
                                 <img src="/static/images/main_image/handshake.png">
-                            </div>asfsdaf
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -606,11 +593,90 @@
                     </div>
                 </div>
             </section>
-
         </main>
 
+        <!-- footer -->
+        <footer>
+            <!-- footer 사이트 내 링크 -->
+            <section class="gni-link">
+                <ul class="footer-link-list">
+                    <li>
+                        <a href="#">
+                            <img src="/static/images/footer/guide-btn.png" alt="">
+                            <span>후원가이드</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/static/images/footer/letter-btn.png" alt="">
+                            <span>희망편지쓰기</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/static/images/footer/club-join-btn.png" alt="">
+                            <span>더네이버스클럽</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/static/images/footer/market-btn.png" alt="">
+                            <span>좋은이웃가게</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/static/images/footer/corp-donation-btn.png" alt="">
+                            <span>기업후원</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!-- footer 회사정보 -->
+            <section class="footer-info">
+                <div class="footer-info-group">
+                    <div>
+                        <p>서울 영등포구 버드나루로 13 굿네이버스회관</p>
+                        <p>사단법인 굿네이버스 인터내셔날 | 사업자등록번호 105-82-13183 | 대표자 이일하</p>
+                        <p>사회복지법인 굿네이버스 | 사업자등록번호 105-82-10319 | 대표자 이호균</p>
+                    </div>
+                    <div>
+                        <p>회원상담센터 1544-7944</p>
+                        <p>대표전화 02-6717-4000</p>
+                        <p>Copyright © GNI all right reserved</p>
+                    </div>
+                    <a href="#"><img src="/static/images/footer/Logo_small.png" alt=""></a>
+                </div>
+            </section>
+            <!-- footer 약관, sns버튼 -->
+            <section class="footer-bottom-wrap">
+                <div class="footer-bottom">
+                    <ul class="footer-bottom-list">
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">이메일무단수집거부</a></li>
+                        <li><a href="#">인재채용</a></li>
+                        <li><a href="#">후원문의</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">사이트맵</a></li>
+                        <li><a href="#">브랜드가이드라인</a></li>
+                        <li><a href="#">세이프가딩정책</a></li>
+                    </ul>
+                    <ul class="sns-group">
+                        <li><a href="#"><img src="/static/images/footer/sns/kakaofriend.png"><span>카카오톡 친구추가</span></a></li>
+                        <li><a href="#"><img src="/static/images/footer/sns/instagram.png"></a></li>
+                        <li><a href="#"><img src="/static/images/footer/sns/facebook.png"></a></li>
+                        <li><a href="#"><img src="/static/images/footer/sns/twitter.png"></a></li>
+                        <li><a href="#"><img src="/static/images/footer/sns/blog.png"></a></li>
+                        <li><a href="#"><img src="/static/images/footer/sns/kakaostory.png"></a></li>
+                        <li><a href="#"><img src="/static/images/footer/sns/youtube_link_btn.png"></a></li>
+                    </ul>
+                </div>
+            </section>
+        </footer>
     </div>
     <script src="/static/js/header.js"></script>
-    <script src="/static/js/main.js"></script>
+    <script src="/static/js/main-slide.js"></script>
+    <script src="/static/js/main-tap.js"></script>
 </body>
 </html>

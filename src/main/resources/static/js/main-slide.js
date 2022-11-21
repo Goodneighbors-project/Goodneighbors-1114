@@ -50,3 +50,5 @@ slideWrap.addEventListener('mouseenter', function(){
 slideWrap.addEventListener('mouseleave', function(){
     startAutoSlide();
 });
+
+
