@@ -1,0 +1,268 @@
+body {
+    padding: 0;
+}
+
+#wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+#container {
+    width: 1264px;
+    margin: 0 auto;
+}
+
+.sub-Vtit {
+    text-align: left;
+}
+
+.sub-tit {
+    margin: auto;
+    padding: 90px 52px 30px;
+    width: 1264px;
+
+    border-bottom: 1px solid #89a230;
+}
+
+.sub-tit h2 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #89a230;
+}
+
+.sub-visual {
+    width: 1264px;
+    margin: auto;
+    background: url(/static/images/pay-img/support_pc.jpg) no-repeat center;
+}
+
+.support-main-img {
+    margin: auto;
+    width: 1264px;
+    height: 274px;
+}
+
+.support-pay .sub-content {
+    padding: 80px 0 0;
+}
+
+.step-sec {
+    text-align: center;
+    margin-bottom: 78px;
+}
+
+.step-Sequence {
+    width: 1048px;
+    margin: auto;
+}
+
+.step-sec .step-box {
+    display: flex;
+    justify-content: center;
+}
+
+.step-box .step {
+    width: 333px;
+    padding: 0 70px;
+}
+
+.step span {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+}
+
+.step label {
+    display: inline-block;
+    margin: 14px 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+
+    background: #d7e1aa;
+    z-index: 1;
+}
+
+.step-line {
+    position: relative;
+    top: -48px;
+    margin: 0 auto;
+    width: 663px;
+    height: 1px;
+
+    z-index: -1;
+    background: #d7e1aa;
+}
+
+.active label {
+    background-color: #89a230;
+}
+
+.step h6 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.donate-selects {
+    width: 1048px;
+    margin: auto;
+}
+
+.support-donate-tit h6 {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #dcdcdc;
+    text-align: left;
+
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 21px;
+}
+
+.support-donate-tit h6 span {
+    margin: 15px;
+
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.donate-payInput {
+    padding-bottom: 28px;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.support-donate-table .row1 {
+    padding-top: 28px;
+}
+
+.donate-payInput .check-box {
+    line-height: 27px;
+}
+
+.check:last-child {
+    margin-right: 0;
+}
+
+.check input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+
+    cursor: pointer;
+}
+
+.check label {
+    position: relative;
+    top: -5px;
+
+    padding-left: 43px;
+    line-height: 27px;
+
+    font-size: 20px;
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+.support-donate-table .row2 {
+    display: flex;
+    padding-bottom: 28px;
+}
+
+.row2 h6 {
+    width: 108px;
+    line-height: 50px;
+    float: left;
+}
+
+.donate-pay-radio {
+    margin-right: 33px;
+    overflow: hidden;
+}
+
+.donate-pay-radio > div {
+    float: left;
+    border: 1px solid #89a230;
+}
+
+.donate-pay-radio > div input[type='radio'] {
+    display: none;
+    position: absolute;
+    z-index: -1;
+    margin-top: 10px;
+}
+
+.donate-pay-radio > div input[type='radio']:checked ~ label {
+    border: 2px solid #89a230;
+
+    font-weight: 800;
+    color: #89a230;
+    background: #fff;
+}
+
+.donate-pay-radio > div label {
+    display: inline-block;
+    width: 102px;
+    height: 50px;
+    line-height: 50px;
+
+    font-weight: 700;
+    text-align: center;
+
+    cursor: pointer;
+}
+
+.support-donate-table .row2 > div {
+    float: left;
+}
+
+.row2 h6 {
+    width: 108px;
+    line-height: 50px;
+    font-size: 100%;
+}
+
+.donate-pay-input {
+    padding-right: 16px;
+    width: 183px;
+    height: 50px;
+    border: 1px solid #dcdcdc;
+    overflow: hidden;
+}
+
+.donate-pay-input input {
+    width: 134px;
+    height: 48px;
+    border: none;
+
+    font-size: 16px;
+    text-indent: 10px;
+}
+
+.input-box input[type='number']::-webkit-outer-spin-button,
+.input-box input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.donate-pay-input label {
+    float: right;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 46px;
+}
+
+.donate-pay-sinfo {
+    margin-left: 33px;
+
+    font-size: 14px;
+    line-height: 50px;
+    color: #666666;
+}
+
+.donate-pay-total {
+    float: right;
+
+    text-align: right;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 50px;
+}

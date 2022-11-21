@@ -54,7 +54,7 @@
     display: inline-block;
     margin: 0 0;
     padding: 0 0 17px 0;
-    height: 27px;
+    height: 37px;
     
     font-weight: normal;
     font-size: 18px;
@@ -62,7 +62,7 @@
 }
 
 .member-cont .important {
-    background: url(/static/images/register/icon_dot_03.png) no-repeat 0 center;
+    background: url(/static/images/register-img/icon_dot_03.png) no-repeat 0 center;
 }
 
 .info-box {
@@ -70,6 +70,8 @@
 }
 
 .info-box > span {
+    position: relative;
+    top: -3px;
     float: right;
     padding: 0 0 0 10px;
     line-height: 40px;
@@ -84,9 +86,12 @@
 
 .base-info-sec table {
     width: 100%;
+    border: 0;
+    
 }
 
 .base-info-sec table th {
+    padding: 10px 25px;
     text-align: left;
     border-bottom: 1px solid #dcdcdc;
     background: #fbfbfb;
@@ -99,4 +104,148 @@
 
 .base-info-sec table th:first-child {
     border-left: none;
+}
+
+.base-info-sec table td {
+    padding: 15px 0 15px 15px;
+    border-bottom: 1px solid #dcdcdc;
+
+    font-size: 12px;
+    line-height: 1.5;
+    font-family: Malgun Gothic, "막은 고딕";
+    color: #333;
+}
+
+.base-info-sec table input[type="text"], input[type="password"] {
+    padding: 0 10px;
+    height: 31px;
+    border: 1px solid #d6d6d6;
+    
+    color: #333;
+
+    outline: none;
+    font-size: 12px;
+}
+
+.base-info-sec table input[type="text"] {
+    width: 380px;
+}
+
+.member-warning {
+    display: inline;
+    position: relative;
+}
+
+.base-info-sec .member-email input[type="text"] {
+    width: 251px;
+}
+
+.member-email select {
+    padding: 0 0 0 8px;
+    height: 31px;
+    width: 125px;
+    border: 1px solid #cccccc;
+    outline: none;
+
+    color: #717171;
+
+    cursor: pointer;
+}
+
+.member-email option {
+    
+    font-size: 13px;
+}
+
+.form-element {
+    margin-top: 5px;
+}
+
+.form-element input {
+    height: 13px;
+    top: 3px;
+    left: 1px;
+    
+    line-height: 5px;
+}
+
+.form-element label {
+    display: inline-block;
+    position: relative;
+    padding: 0 0 0 10px;
+
+    top: -1px;
+    left: 0;
+    min-height: 20px;
+}
+
+.address-postcode {
+    overflow: hidden;
+}
+
+.member-address .address-postcode input[type="text"] {
+    width: 190px;
+    line-height: 31px;
+    float: left;
+}
+
+.address-postcode .btn-postsearch {
+    float: left;
+    margin: 0 0 0 5px;
+    padding: 5px 10px 5px 10px;
+    border: 1px solid #989898;
+
+    background-color: white;
+
+    cursor: pointer;
+}
+
+.member-address .address-input input {
+    margin: 10px 0 0 0;
+}
+
+.member-cont .btn-center-box {
+    margin: 35px 0 0 0;
+}
+
+.btn-center-box {
+    text-align: center;
+}
+
+.btn-center-box button + button {
+    margin-left: 6px;
+}
+
+.btn-center-box button {
+    margin: 0 2px 0 3px;
+    width: 150px;
+    height: 45px;
+
+    font-weight: bold;
+    font-size: 13px;
+    
+    cursor: pointer;
+}
+
+.btn-center-box .btn-cancel {
+    background: #fff;
+
+    border: 1px solid #cccccc;
+}
+
+.btn-cancel:hover {
+    color: #333333;
+    border: 1px solid #bbbbbb;
+}
+
+.btn-center-box .btn-join {
+    border: 1px solid #ECF3E6;
+    color: #3e3e3e;
+    background: #ECF3E6;
+}
+
+.btn-center-box .btn-join:hover {
+    border: 1px solid #d3eebcbe;
+    color: #222222;
+    background: #d3eebcbe;
 }
