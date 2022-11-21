@@ -84,6 +84,11 @@
     line-height: 40px;
 }
 
+.base-info-sec .error-message {
+    padding-top: 5px;
+    color: #ab3e55;
+}
+
 .base-info-sec table {
     width: 100%;
     border: 0;
