@@ -13,4 +13,6 @@ public class AccountController {
     @GetMapping("/account/register")
     public String register() {return "account/register";}
 
+    @GetMapping("/account/complete")
+    public  String complete() {return "account/complete";}
 }

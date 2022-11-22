@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>굿네이버스 공식 홈페이지 | 세상을 위한 좋은 변화, 굿네이버스</title>
 </head>
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
 <link rel="stylesheet" href="/static/css/style.css">
 <link rel="stylesheet" href="/static/css/header.css">
 <link rel="stylesheet" href="/static/css/footer.css">
@@ -277,7 +279,7 @@
                                     <input type="text" id="password" class="form-control ime-false" placeholder="비밀번호" title="비밀번호를 입력하세요.">
                                 </div>
                                 <div class="ax-padding-box btn-wrap">
-                                    <button type="submit" class="btn btn-confirm btn-ga-send">로그인</button>
+                                    <button type="submit" class="btn btn-confirm btn-login">로그인</button>
                                 </div>
                                 <div class="login-check">
                                     <div class="check-box">
@@ -295,7 +297,7 @@
                                     </div>
                                 </div>
                                 <div class="social-login-btn1">
-                                    <a href="" class="naver-btn btn-ga-send">
+                                    <a href="/oauth2/authorization/naver" class="naver-btn btn-ga-send" >
                                         <img src="/static/images/account/login_images/i_naver.png"> 네이버 로그인</a>
                                     <a href="" class="kakao-btn btn-ga-send">
                                        <img src="/static/images/account/login_images/i_kakao.png"> 카카오 로그인</a>
@@ -397,5 +399,6 @@
 <script src="/static/js/header.js"></script>
 <script src="/static/js/main-slide.js"></script>
 <script src="/static/js/main-tap.js"></script>
+<script src="/static/js/account/login.js"></script>
 </body>
 </html>

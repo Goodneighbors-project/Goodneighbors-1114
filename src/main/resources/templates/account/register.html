@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>굿네이버스 공식 홈페이지 | 세상을 위한 좋은 변화, 굿네이버스</title>
 </head>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
 <link rel="stylesheet" href="/static/css/style.css">
 <link rel="stylesheet" href="/static/css/header.css">
 <link rel="stylesheet" href="/static/css/footer.css">
@@ -352,16 +354,16 @@
                                             <th>주소</th>
                                             <td class="member-address">
                                                 <div class="address-postcode">
-                                                    <input type="text" id="zonecode" name="mem-zonecode">
-                                                    <button type="button" id="btn-Postcode" class="btn-postsearch">우편번호검색</button>
+                                                    <input type="text" id="zonecode" name="mem-zonecode" placeholder="우편번호" readonly="readonly">
+                                                    <button type="button" class="btn-postsearch">우편번호검색</button>
                                                 </div>
                                                 <div class="address-input">
                                                     <div class="member-warning">
-                                                        <input type="text" name="address">
+                                                        <input id="address" type="text" name="address" placeholder="주소" readonly="readonly">
                                                     </div>
                                                     <div class="error-message"></div>
                                                     <div class="member-warning address-sub">
-                                                        <input type="text" name="addressSub" value>
+                                                        <input id="addressSub" type="text" name="addressSub" placeholder="상세주소">
                                                     </div>
                                                 </div>
                                             </td>
@@ -463,5 +465,6 @@
     <script src="/static/js/header.js"></script>
     <script src="/static/js/main-slide.js"></script>
     <script src="/static/js/main-tap.js"></script>
+    <script src="/static/js/account/resgister.js"></script>
 </body>
 </html>
