@@ -13,7 +13,7 @@ import java.time.LocalDateTime;
 @Data
 public class Role {
     private int id;
-    private String name;
+    private String role_name;
     private LocalDateTime create_date;
     private LocalDateTime update_date;
 }

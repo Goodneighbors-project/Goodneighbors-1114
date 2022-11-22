@@ -5,6 +5,8 @@ import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
 public interface AccountRepository {
+
     public User findUserByUsername(String username) throws Exception;
-    public int SaveUser(User user) throws Exception;
+    public int saveUser(User user) throws Exception;
+
 }

@@ -149,6 +149,10 @@
     color: #333;
 }
 
+.inputs-invisible {
+    border: 1px solid #ab3e55 !important;
+}
+
 .base-info-sec .error-message {
     padding-top: 5px;
     color: #ab3e55;
