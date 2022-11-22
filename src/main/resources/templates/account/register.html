@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>굿네이버스 공식 홈페이지 | 세상을 위한 좋은 변화, 굿네이버스</title>
 </head>
-<link rel="stylesheet" href="/static/css/header.css">
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
 <link rel="stylesheet" href="/static/css/style.css">
-<link rel="stylesheet" href="/static/css/account/register.css">
+<link rel="stylesheet" href="/static/css/header.css">
 <link rel="stylesheet" href="/static/css/footer.css">
+<link rel="stylesheet" href="/static/css/account/register.css">
 <body>
     <div id="wrapper">
     <header>
@@ -17,8 +19,8 @@
             <div class="header-group">
                 <div class="header-top">
                     <ul class="account-list">
-                        <li><a href="account/login">로그인</a></li>
-                        <li><a href="account/register">회원가입</a></li>
+                        <li><a href="/account/login">로그인</a></li>
+                        <li><a href="/account/register">회원가입</a></li>
                         <li><a class="receipt-btn" href="#">기부금 영수증</a></li>
                     </ul>
                 </div>
@@ -254,22 +256,22 @@
     </header>
     <section id="container" class="join join-step1">
         <article class="join-cont">
-            <div class="join-title">
-                <h3>회원가입(홈페이지 ID 만들기)</h3>
+            <div class="title-wrapper">
+                <div class="join-title">
+                    <h3>회원가입</h3>
+                    <h6>굿네이버스 홈페이지 가입을 환영합니다.</h6>
+                </div>
             </div>
             <div class="join-box">
-                <div class="register-join-title">
-                    <h6>굿네이버스 홈페이지 가입을 환영합니다.</h6>
-                    <p>
-                        <span>홈페이지 회원가입은 굿네이버스 후원 신청 후</span> 가입이 가능합니다.
-                    </p>
-                </div>
                 <div class="member-cont">
                     <form id="formJoin" name="formJoin" method="post" action="">
                         <div class="base-info-box">
                             <div class="info-box">
                                 <h3>기본정보</h3>
-                                <span class="important">표시는 반드시 입력하셔야 하는 항목입니다.</span>
+                                <div class="imp-box">
+                                    <img src="/static/images/account/register-img/icon_dot_03.png">
+                                    <span class="important">표시는 반드시 입력하셔야 하는 항목입니다.</span>
+                                </div>
                             </div>
                             <div class="base-info-sec">
                                 <table>
@@ -279,7 +281,8 @@
                                     </colgroup>
                                     <tbody>
                                         <tr>
-                                            <th><span class="important">아이디</span></th>
+                                            <th>
+                                                <span class="important">아이디</span></th>
                                             <td>
                                                 <div class="member-warning member-username">
                                                     <input type="text" id="username" name="mem-username">
@@ -351,15 +354,16 @@
                                             <th>주소</th>
                                             <td class="member-address">
                                                 <div class="address-postcode">
-                                                    <input type="text" id="zonecode" name="mem-zonecode">
-                                                    <button type="button" id="btn-Postcode" class="btn-postsearch">우편번호검색</button>
+                                                    <input type="text" id="zonecode" name="mem-zonecode" placeholder="우편번호" readonly="readonly">
+                                                    <button type="button" class="btn-postsearch">우편번호검색</button>
                                                 </div>
                                                 <div class="address-input">
                                                     <div class="member-warning">
-                                                        <input type="text" name="address">
+                                                        <input id="address" type="text" name="address" placeholder="주소" readonly="readonly">
                                                     </div>
+                                                    <div class="error-message"></div>
                                                     <div class="member-warning address-sub">
-                                                        <input type="text" name="addressSub" value>
+                                                        <input id="addressSub" type="text" name="addressSub" placeholder="상세주소">
                                                     </div>
                                                 </div>
                                             </td>
@@ -377,7 +381,6 @@
             </div>
         </article>
     </section>
-    
     <!-- footer -->
     <footer>
         <!-- footer 사이트 내 링크 -->
@@ -415,6 +418,7 @@
                 </li>
             </ul>
         </section>
+
         <!-- footer 회사정보 -->
         <section class="footer-info">
             <div class="footer-info-group">
@@ -458,6 +462,9 @@
         </section>
     </footer>
 </div>
-<script src="/static/js/header.js"></script>
+    <script src="/static/js/header.js"></script>
+    <script src="/static/js/main-slide.js"></script>
+    <script src="/static/js/main-tap.js"></script>
+    <script src="/static/js/account/resgister.js"></script>
 </body>
 </html>
