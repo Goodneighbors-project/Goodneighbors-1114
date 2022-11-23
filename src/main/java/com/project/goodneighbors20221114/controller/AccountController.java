@@ -19,8 +19,11 @@ public class AccountController {
     }
 
     @GetMapping("/account/register_complete")
-    public String registerComplete(Model model, @RequestParam String username){
+    public String registerComplete(Model model,
+                                   @RequestParam String username){
+
         model.addAttribute("username", username);
+
         return "account/register_complete";
     }
 

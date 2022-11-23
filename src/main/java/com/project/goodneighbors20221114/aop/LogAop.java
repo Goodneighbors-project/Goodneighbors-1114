@@ -22,6 +22,7 @@ public class LogAop {
     public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
 
         CodeSignature codeSignature = (CodeSignature) joinPoint.getSignature();
+
         String className = codeSignature.getDeclaringTypeName();
         String methodName = codeSignature.getName();
         String[] parameterNames = codeSignature.getParameterNames(); // 다운캐스팅을 하여야만 사용가능

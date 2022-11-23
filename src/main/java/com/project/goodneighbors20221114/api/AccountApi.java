@@ -26,7 +26,8 @@ public class AccountApi {
 
     @LogAspect
     @PostMapping("/register")
-    public ResponseEntity<?> register(@Validated(ValidationSequence.class) @RequestBody RegisterReqDto registerReqDto, BindingResult bindingResult) throws Exception{
+    public ResponseEntity<?> register(@Validated(ValidationSequence.class) @RequestBody RegisterReqDto registerReqDto,
+                                      BindingResult bindingResult) throws Exception{
 
         accountService.duplicateUsername(registerReqDto);
         accountService.passwordCheck(registerReqDto);

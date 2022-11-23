@@ -60,6 +60,6 @@
             #{role_id},
             now(),
             now()
-        )
+        );
     </insert>
 </mapper>
