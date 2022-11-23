@@ -10,6 +10,40 @@ spring:
       name: test@naver.com
       password: 1q2w3e4r!
 
+    oauth2.client:
+      registration:
+        kakao:
+          clientId: 7e3a9ba4e41e5e370cf71a8ef00af4d4
+          clientSecret: nvTuWedYT6o93LgF3kdtvJCbuPJhoqht
+          clientAuthenticationMethod: post
+          authorizationGrantType: authorization_code
+          redirectUri: http://localhost:8000?login/oauth2/code/kakao
+          scope:
+            - profile_nickname
+            - prifile_email
+          clientName: Kakao
+        naver:
+          clientId: OeuMehA66li381JOejT7
+          clientSecret: c23tOD4JKc
+          scope:
+            - email
+            - name
+          clientName: Naver
+          authorizationGrantType: authorization_code
+          redirectUri: http://localhost:8000/login/oauth2/code/naver
+      provider:
+        naver:
+          authorizationUri: https://nid.naver.com/oautht2.0/authorize
+          tokenUri: https://nid.naver.com/oauth2.0/token
+          userInfoUri: https://openapi.naver.com/v1/nid/me
+          userNameAttribute: response
+        kakao:
+          authorizationUri: https://kauth.kakao.com/oauth/autorize
+          tokenUri: https://kauth.kakao.com/oauth/token
+          userInfoUri: https://kapi.kakao.com/v2/user/me
+          userNameAttribute: Id
+
+
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
     url: jdbc:mariadb://shc-db.cgogdkhaohzu.ap-northeast-2.rds.amazonaws.com:3306/goodneighbors-1114
