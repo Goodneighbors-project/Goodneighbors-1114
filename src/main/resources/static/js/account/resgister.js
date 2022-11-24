@@ -117,7 +117,7 @@ class InputData{
                 "name" : document.querySelectorAll(".account-input")[3].value,
                 "email" : document.querySelectorAll(".account-input")[4].value,
                 "phone" : document.querySelectorAll(".account-input")[5].value,
-                "postCode" : document.querySelectorAll(".account-input")[6].value,
+                "postcode" : document.querySelectorAll(".account-input")[6].value,
                 "address" : document.querySelectorAll(".account-input")[7].value,
                 "addressSub" : document.querySelectorAll(".account-input")[8].value
             }

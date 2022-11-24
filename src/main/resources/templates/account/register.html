@@ -19,8 +19,8 @@
             <div class="header-group">
                 <div class="header-top">
                     <ul class="account-list">
-                        <li><a href="/account/login">로그인</a></li>
-                        <li><a href="/account/register">회원가입</a></li>
+                        <li><a href="/account/login" class="header-login-btn">로그인</a></li>
+                        <li><a href="/account/register" class="header-register-btn">회원가입</a></li>
                         <li><a class="receipt-btn" href="#">기부금 영수증</a></li>
                     </ul>
                 </div>
@@ -253,6 +253,8 @@
                 </div>
             </div>
         </div>
+        <script src="/static/js/account/principal.js"></script>
+        <script src="/static/js/header.js"></script>
     </header>
     <section id="container" class="join join-step1">
         <article class="join-cont">
@@ -285,7 +287,7 @@
                                                 <span class="important">아이디</span></th>
                                             <td>
                                                 <div class="member-warning member-username">
-                                                    <input class="account-input" type="text" id="username" name="mem-username">
+                                                    <input class="account-input" type="text" id="username" name="mem-username" value="hhhc0213">
                                                 </div>
                                                 <div class="error-message"></div>
                                             </td>
@@ -294,7 +296,7 @@
                                             <th><span class="important">비밀번호</span></th>
                                             <td>
                                                 <div class="member-warning member-password">
-                                                    <input class="account-input" type="password" id="password" name="mem-password">
+                                                    <input class="account-input" type="password" id="password" name="mem-password" value="gmlcjf0213!@">
                                                 </div>
                                                 <div class="error-message"></div>
                                             </td>
@@ -303,16 +305,16 @@
                                             <th><span class="important">비민번호 확인</span></th>
                                             <td>
                                                 <div class="member-warning member-passwordchk">
-                                                    <input class="account-input" type="password" id="passwordcheck" name="mem-passwordchk">
+                                                    <input class="account-input" type="password" id="passwordcheck" name="mem-passwordchk" value="gmlcjf0213!@">
                                                 </div>
                                                 <div class="error-message"></div>
                                             </td>
                                         </tr>
                                         <tr>
-                                            <th><span class="important">이름</span></th>
+                                            <th><span class="important">성명·단체명</span></th>
                                             <td>
                                                 <div class="member-warning member-name">
-                                                    <input class="account-input" type="text" id="Name" name="mem-Name">
+                                                    <input class="account-input" type="text" id="Name" name="mem-Name" value="성희철">
                                                 </div>
                                                 <div class="error-message"></div>
                                             </td>
@@ -321,7 +323,7 @@
                                             <th><span class="important">이메일</span></th>
                                             <td>
                                                 <div class="member-warning member-email">
-                                                    <input class="account-input" type="text" id="email" name="mem-email">
+                                                    <input class="account-input" type="text" id="email" name="mem-email" value="hhhc0213">
                                                     <select id="emailDomain" name="emailDomain" class="emailDomain">
                                                         <option value="">직접입력</option>
                                                         <option value="@naver.com">naver.com</option>
@@ -343,7 +345,7 @@
                                             <th><span class="important">휴대폰번호</span></th>
                                             <td>
                                                 <div class="member-warning member-phoneNumber">
-                                                    <input class="account-input" type="text" id="phoneNumber" name="mem-phoneNum" placeholder="- 없이 입력하세요">
+                                                    <input class="account-input" type="text" id="phoneNumber" name="mem-phoneNum" placeholder="- 없이 입력하세요" value="01020611127">
                                                 </div>
                                                 <div class="error-message"></div>
                                                 <div class="form-element">
@@ -463,7 +465,6 @@
         </section>
     </footer>
 </div>
-    <script src="/static/js/header.js"></script>
     <script src="/static/js/account/resgister.js"></script>
 </body>
 </html>
