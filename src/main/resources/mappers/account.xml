@@ -6,18 +6,30 @@
 <mapper namespace="com.project.goodneighbors20221114.repository.AccountRepository">
     <resultMap id="role" type="com.project.goodneighbors20221114.domain.Role">
         <result property="id" column="id"/>
+<<<<<<< HEAD
         <result property="name" column="name"/>
+=======
+        <result property="role_name" column="role_name"/>
+>>>>>>> SHC
         <result property="create_date" column="create_date"/>
         <result property="update_date" column="update_date"/>
     </resultMap>
 
     <resultMap id="user" type="com.project.goodneighbors20221114.domain.User">
         <result property="id" column="id"/>
+<<<<<<< HEAD
         <result property="userName" column="username"/>
         <result property="password" column="password"/>
         <result property="name" column="name"/>
         <result property="phone" column="phone"/>
         <result property="email" column="email"/>
+=======
+        <result property="username" column="username"/>
+        <result property="password" column="password"/>
+        <result property="name" column="name"/>
+        <result property="email" column="email"/>
+        <result property="phone" column="phone"/>
+>>>>>>> SHC
         <result property="postcode" column="postcode"/>
         <result property="address" column="address"/>
         <result property="addressSub" column="addressSub"/>
@@ -27,20 +39,52 @@
         <collection property="role" resultMap="role"/>
     </resultMap>
 
+<<<<<<< HEAD
     <select id="findUserByUserName" parameterType="String" resultMap="user">
+=======
+    <select id="findUserByUsername" parameterType="String" resultMap="user">
+>>>>>>> SHC
         select
             um.id,
             um.username,
             um.password,
             um.name,
             um.role_id,
+<<<<<<< HEAD
             rm.name as role_name,
+=======
+            rm.role_name,
+>>>>>>> SHC
             um.create_date,
             um.update_date
         from
             user_mst um
             left outer join role_mst rm on(rm.id = um.role_id)
         where
+<<<<<<< HEAD
             um.username = #{userName}
     </select>
+=======
+            um.username = #{username}
+    </select>
+
+    <insert id="saveUser" parameterType="com.project.goodneighbors20221114.domain.User">
+        insert into
+            user_mst
+        values(
+            0,
+            #{username},
+            #{password},
+            #{name},
+            #{email},
+            #{phone},
+            #{postcode},
+            #{address},
+            #{addressSub},
+            #{role_id},
+            now(),
+            now()
+        );
+    </insert>
+>>>>>>> SHC
 </mapper>

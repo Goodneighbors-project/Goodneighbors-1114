@@ -13,7 +13,11 @@ import java.time.LocalDateTime;
 @Data
 public class User {
     private int id;
+<<<<<<< HEAD
     private String userName;
+=======
+    private String username;
+>>>>>>> SHC
     private String password;
     private String name;
     private String email;

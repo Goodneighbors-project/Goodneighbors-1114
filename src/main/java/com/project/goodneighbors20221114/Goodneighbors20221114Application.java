@@ -9,5 +9,4 @@ public class Goodneighbors20221114Application {
 	public static void main(String[] args) {
 		SpringApplication.run(Goodneighbors20221114Application.class, args);
 	}
-
 }
