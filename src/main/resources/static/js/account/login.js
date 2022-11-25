@@ -1,8 +1,3 @@
-const btnlogin = document.querySelector(".btn-login");
-
-btnlogin.onclick = () => {
-     location.href = "/main"
-}
 
 class KakaoLogin {
 
@@ -28,3 +23,4 @@ class KakaoLogin {
      });
 
 }
+
