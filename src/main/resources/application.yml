@@ -17,7 +17,7 @@ spring:
           clientSecret: nvTuWedYT6o93LgF3kdtvJCbuPJhoqht
           clientAuthenticationMethod: post
           authorizationGrantType: authorization_code
-          redirectUri: http://localhost:8000?login/oauth2/code/kakao
+          redirectUri: http://localhost:8000/account/login
           scope:
             - profile_nickname
             - account_email
