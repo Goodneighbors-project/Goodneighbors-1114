@@ -32,9 +32,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .permitAll()
                 .and()
                 .formLogin()
-                .usernameParameter("username")
                 .loginPage("/account/login")
-                .loginProcessingUrl("/accouont/login")
+                .loginProcessingUrl("/account/login")
                 .failureHandler(new AuthFailureHandler())
                 .and()
                 .oauth2Login()
@@ -43,4 +42,5 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .defaultSuccessUrl("/main");
     }
+
 }

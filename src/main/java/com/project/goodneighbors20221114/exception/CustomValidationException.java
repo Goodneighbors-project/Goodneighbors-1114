@@ -1,7 +1,10 @@
 package com.project.goodneighbors20221114.exception;
 
+import lombok.Getter;
+
 import java.util.Map;
 
+@Getter
 public class CustomValidationException extends RuntimeException{
 
     private Map<String, String> errorMap;
@@ -10,4 +13,5 @@ public class CustomValidationException extends RuntimeException{
         super(message);
         this.errorMap = errorMap;
     }
+
 }

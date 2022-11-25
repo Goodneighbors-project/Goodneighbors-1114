@@ -13,11 +13,11 @@
 
     <resultMap id="user" type="com.project.goodneighbors20221114.domain.User">
         <result property="id" column="id"/>
-        <result property="userName" column="username"/>
+        <result property="username" column="username"/>
         <result property="password" column="password"/>
         <result property="name" column="name"/>
-        <result property="phone" column="phone"/>
         <result property="email" column="email"/>
+        <result property="phone" column="phone"/>
         <result property="postcode" column="postcode"/>
         <result property="address" column="address"/>
         <result property="addressSub" column="addressSub"/>
@@ -27,7 +27,7 @@
         <collection property="role" resultMap="role"/>
     </resultMap>
 
-    <select id="findUserByUserName" parameterType="String" resultMap="user">
+    <select id="findUserByUsername" parameterType="String" resultMap="user">
         select
             um.id,
             um.username,
@@ -41,6 +41,25 @@
             user_mst um
             left outer join role_mst rm on(rm.id = um.role_id)
         where
-            um.username = #{userName}
+            um.username = #{username}
     </select>
+
+    <insert id="saveUser" parameterType="com.project.goodneighbors20221114.domain.User">
+        insert into
+            user_mst
+        values(
+            0,
+            #{username},
+            #{password},
+            #{name},
+            #{email},
+            #{phone},
+            #{postcode},
+            #{address},
+            #{addressSub},
+            #{role_id},
+            now(),
+            now()
+        );
+    </insert>
 </mapper>

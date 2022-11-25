@@ -26,7 +26,7 @@
     margin: 0 auto;
 
     padding: 50px 108px 0 108px;
-    width: 783px;
+    width: 1400px;
     height: 200px;
     text-align: left;
 }
@@ -147,6 +147,10 @@
     line-height: 1.5;
     font-family: Malgun Gothic, "막은 고딕";
     color: #333;
+}
+
+.inputs-invisible {
+    border: 1px solid #ab3e55 !important;
 }
 
 .base-info-sec .error-message {
