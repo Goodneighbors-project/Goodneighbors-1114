@@ -37,7 +37,9 @@ public class AccountApi {
 
     @GetMapping("/principal")
     public ResponseEntity<?> getPrincipal(@AuthenticationPrincipal PrincipalDetails principalDetails ) {
+
         return ResponseEntity.ok(new CMRespDto<>("successfully get Principal", principalDetails == null ? "" : principalDetails));
+
     }
 
 }
