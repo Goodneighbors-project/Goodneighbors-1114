@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class MainpageController {
 
-    @GetMapping(value = {"account","/main",""})
+    @GetMapping(value = {"/","/main",""})
     public String main() {
         return "main";
     }

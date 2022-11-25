@@ -2,7 +2,9 @@ package com.project.goodneighbors20221114.controller;
 
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class AccountController {
@@ -13,6 +15,5 @@ public class AccountController {
     @GetMapping("/account/register")
     public String register() {return "account/register";}
 
-    @GetMapping("/account/complete")
-    public  String complete() {return "account/complete";}
+
 }
