@@ -4,6 +4,7 @@ import com.project.goodneighbors20221114.aop.annotation.LogAspect;
 import com.project.goodneighbors20221114.dto.CMRespDto;
 import com.project.goodneighbors20221114.dto.RegisterReqDto;
 import com.project.goodneighbors20221114.dto.validation.ValidationSequence;
+import com.project.goodneighbors20221114.security.PrincipalDetails;
 import com.project.goodneighbors20221114.service.AccountService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -35,8 +36,8 @@ public class AccountApi {
     }
 
     @GetMapping("/principal")
-    public ResponseEntity<?> getPrincipal(/*@AuthenticationPrincipal PrincipalDetails principalDetails*/ ) {
-        return ResponseEntity.ok(new CMRespDto<>("successfully get Principal", null/*principalDetails == null ? "" : principalDetails*/));
+    public ResponseEntity<?> getPrincipal(@AuthenticationPrincipal PrincipalDetails principalDetails ) {
+        return ResponseEntity.ok(new CMRespDto<>("successfully get Principal", principalDetails == null ? "" : principalDetails));
     }
 
 }
