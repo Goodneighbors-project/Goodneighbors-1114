@@ -20,7 +20,7 @@ spring:
           redirectUri: http://localhost:8000?login/oauth2/code/kakao
           scope:
             - profile_nickname
-            - prifile_email
+            - account_email
           clientName: Kakao
         naver:
           clientId: OeuMehA66li381JOejT7
