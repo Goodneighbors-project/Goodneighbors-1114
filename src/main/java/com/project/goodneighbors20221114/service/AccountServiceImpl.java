@@ -1,8 +1,5 @@
 package com.project.goodneighbors20221114.service;
 
-<<<<<<< HEAD
-public class AccountServiceImpl {
-=======
 import com.project.goodneighbors20221114.domain.User;
 import com.project.goodneighbors20221114.dto.RegisterReqDto;
 import com.project.goodneighbors20221114.exception.CustomInternalServerErrorException;
@@ -61,6 +58,4 @@ public class AccountServiceImpl implements AccountService{
 
         }
     }
-
->>>>>>> SHC
 }

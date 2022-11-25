@@ -1,9 +1,5 @@
 package com.project.goodneighbors20221114.api;
 
-<<<<<<< HEAD
-public class AccountApi {
-
-=======
 import com.project.goodneighbors20221114.aop.annotation.LogAspect;
 import com.project.goodneighbors20221114.dto.CMRespDto;
 import com.project.goodneighbors20221114.dto.RegisterReqDto;
@@ -42,6 +38,5 @@ public class AccountApi {
     public ResponseEntity<?> getPrincipal(/*@AuthenticationPrincipal PrincipalDetails principalDetails*/ ) {
         return ResponseEntity.ok(new CMRespDto<>("successfully get Principal", null/*principalDetails == null ? "" : principalDetails*/));
     }
->>>>>>> SHC
 
 }

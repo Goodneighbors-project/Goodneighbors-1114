@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const btnCancel = document.querySelector(".btn-cancel");
 
 btnCancel.onclick = () => {
@@ -194,17 +193,14 @@ class InputData{
                     ErrorMessage.getInstance().loadErrorMessage(error.responseJSON.data);
                 }
             });
-
->>>>>>> SHC
         }
     }
 }
 
-<<<<<<< HEAD
 window.onload = () => {
     SearchPostcode.getInstance();
 }
-=======
+
 class ErrorMessage{
 
     static #instance = null;
@@ -324,7 +320,3 @@ window.onload = () => {
 
 }
 
-
-
-
->>>>>>> SHC

@@ -1,30 +1,16 @@
 package com.project.goodneighbors20221114.controller;
 
-<<<<<<< HEAD
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-=======
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
->>>>>>> SHC
 
 @Controller
 public class AccountController {
 
-<<<<<<< HEAD
-    @GetMapping ("/account/login")
-    public String login() {return "account/login";}
-
-    @GetMapping("/account/register")
-    public String register() {return "account/register";}
-
-    @GetMapping("/account/complete")
-    public  String complete() {return "account/complete";}
-}
-=======
     @GetMapping("/account/login")
     public String login(){
         return "account/login";
@@ -45,4 +31,3 @@ public class AccountController {
     }
 
 }
->>>>>>> SHC
