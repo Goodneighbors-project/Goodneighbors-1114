@@ -26,11 +26,7 @@
     margin: 0 auto;
 
     padding: 50px 108px 0 108px;
-<<<<<<< HEAD
-    width: 783px;
-=======
     width: 1400px;
->>>>>>> SHC
     height: 200px;
     text-align: left;
 }
@@ -153,13 +149,10 @@
     color: #333;
 }
 
-<<<<<<< HEAD
-=======
 .inputs-invisible {
     border: 1px solid #ab3e55 !important;
 }
 
->>>>>>> SHC
 .base-info-sec .error-message {
     padding-top: 5px;
     color: #ab3e55;
