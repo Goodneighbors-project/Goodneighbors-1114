@@ -4,7 +4,6 @@ import com.project.goodneighbors20221114.domain.User;
 import com.project.goodneighbors20221114.dto.validation.ValidationGroups;
 import lombok.Data;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
