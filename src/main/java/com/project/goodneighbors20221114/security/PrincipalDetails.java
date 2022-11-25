@@ -10,20 +10,12 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Map;
 
-@Data
-public class PrincipalDetails implements UserDetails, OAuth2User {
+public class PrincipalDetails implements UserDetails {
 
     private User user;
-    private Map<String, Object> attributes;
-
 
     public PrincipalDetails(User user) {
         this.user = user;
-    }
-
-    public PrincipalDetails(User user, Map<String, Object> attributes) {
-        this.user = user;
-        this.attributes = attributes;
     }
 
     @Override
@@ -32,7 +24,6 @@ public class PrincipalDetails implements UserDetails, OAuth2User {
         authorities.add(() -> user.getRole().getRole_name());
         return authorities;
     }
-
 
     @Override
     public String getPassword() {
@@ -62,14 +53,5 @@ public class PrincipalDetails implements UserDetails, OAuth2User {
     @Override
     public boolean isEnabled() {
         return true;
-    }
-
-    @Override
-    public String getName() {
-        return (String) attributes.get("name");
-    }
-
-    public Map<String, Object> getAttributes(String name) {
-        return attributes;
     }
 }
