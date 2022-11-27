@@ -2,9 +2,375 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자 페이지</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+    <link rel="stylesheet" href="/static/css/admin/admin.css">
 </head>
 <body>
+    <div id="wrapper">
+        <!-- header -->
+        <header>
+            <div class="header-wrap">
+                <div class="header-group">
+                    <div class="header-top">
+                        <ul class="account-list">
+                        </ul>
+                    </div>
+                    <div class="header-bottom">
+                        <div class="header-logo">
+                            <img src="/static/images/header_images/Logo_big.png" alt="logo">
+                        </div>
+                        <nav>
+                            <ul class="main-menu">
+                                <li>
+                                    <a class="main-menu-btn" href="#">후원하기</a>
+                                    <ul class="menu-wrap">
+                                        <li>
+                                            <ul class="submenu">
+                                                <li>
+                                                    <ul class="submenu-part">
+                                                        <li class="submenu-title"><a href="#">캠페인후원</a></li>
+                                                        <li class="submenu-title"><a href="#">해외아동 1:1결연</a></li>
+                                                    </ul>
+                                                    <ul class="submenu-part">
+                                                        <li class="submenu-title"><a href="#">개인후원</a></li>
+                                                        <li class="submenu-title"><a href="#">기업후원</a></li>
+                                                    </ul>
+                                                    <ul class="submenu-part">
+                                                        <li class="submenu-title"><a href="#">고액기부</a></li>
+                                                        <li class="submenu-title"><a href="#">유산기부</a></li>
+                                                    </ul>
+                                                    <ul class="side-menu">
+                                                        <li>
+                                                            <a href="#">
+                                                                <img class="" src="/static/images/header_images/donation1.jpg" alt="">
+                                                                <h6>[해외아동 1:1결연]<br>응, 시작해봐<br>원했던 오늘을​</h6>
+                                                            </a>
+                                                            <a class="side-menu-detail-btn" href="#">자세히보기</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <img src="/static/images/header_images/donation2.jpg" alt="">
+                                                                <h6>[국내여아지원캠페인]<br>소녀야, 너는 반짝이는 별</h6>
+                                                            </a>
+                                                            <a class="side-menu-detail-btn" href="#">자세히보기</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="main-menu-btn" href="#">스토리</a>
+                                    <ul class="menu-wrap">
+                                        <li>
+                                            <ul class="submenu">
+                                                <li>
+                                                    <ul class="submenu-part">
+                                                        <li class="submenu-title"><a href="#">스토리</a></li>
+                                                        <li class="submenu-title"><a href="#">결과보고</a></li>
+                                                        <li class="submenu-title"><a href="#">영상보기</a></li>
+                                                    </ul>
+                                                    <ul class="submenu-part">
+                                                        <li class="submenu-title"><a href="#">공지/뉴스</a></li>
+                                                        <li class="submenu-title"><a href="#">소식지</a></li>
+                                                        <li class="submenu-title"><a href="#">뉴스레터</a></li>
+                                                    </ul>
+                                                    <ul class="submenu-part">
+                                                        <li class="submenu-title"><a href="#">좋은 이웃 참여</a></li>
+                                                        <li class="submenu-title"><a href="#">자료실</a></li>
+                                                    </ul>
+                                                    <ul class="side-menu">
+                                                        <li>
+                                                            <a href="#">
+                                                                <img class="" src="/static/images/header_images/story1.jpg" alt="">
+                                                                <a class="side-menu-detail-btn" href="#">자세히보기</a>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <img src="/static/images/header_images/story2.jpg" alt="">
+                                                                <a class="side-menu-detail-btn" href="#">자세히보기</a>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="main-menu-btn" href="#">기관소개</a>
+                                    <ul class="menu-wrap">
+                                        <li>
+                                            <ul class="submenu">
+                                                <li>
+                                                    <ul class="submenu-part">
+                                                        <li class="submenu-title"><a href="#">굿네이버스는</a></li>
+                                                        <li><a href="#">기관소개</a></li>
+                                                        <li><a href="#">굿네이버스 정신</a></li>
+                                                        <li><a href="#">CI 및 슬로건</a></li>
+                                                        <li><a href="#">연혁</a></li>
+                                                    </ul>
+                                                    <ul class="submenu-part">
+                                                        <li class="submenu-title"><a href="#">투명경영</a></li>
+                                                        <li><a href="#">굿네이버스 투명경영</a></li>
+                                                        <li><a href="#">재정보고</a></li>
+                                                        <li><a href="#">투명경영기준</a></li>
+                                                        <li><a href="#">조직운영</a></li>
+                                                    </ul>
+                                                    <ul class="submenu-part">
+                                                        <li class="submenu-title"><a href="#">조직현황</a></li>
+                                                        <li><a href="#">글로벌 굿네이버스</a></li>
+                                                        <li><a href="#">국내 조직현황</a></li>
+                                                        <li class="submenu-title"><a href="#">굿네이버스 후원회</a></li>
+                                                        <li class="submenu-title"><a href="#">굿네이버스 친선사절단</a></li>
+                                                    </ul>
+                                                    <ul class="side-menu">
+                                                        <li>
+                                                            <a href="#">
+                                                                <img class="" src="/static/images/header_images/corporation1.jpg" alt="">
+                                                                <a class="side-menu-detail-btn" href="#">자세히보기</a>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <img src="/static/images/header_images/corporation2.jpg" alt="">
+                                                                <a class="side-menu-detail-btn" href="#">자세히보기</a>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="main-menu-btn" href="#">사업안내</a>
+                                    <ul class="menu-wrap">
+                                        <li>
+                                            <ul class="submenu">
+                                                <li>
+                                                    <ul class="submenu-part">
+                                                        <li class="submenu-title"><a href="#">국제구호개발사업</a></li>
+                                                        <li><a href="#">지역개발사업</a></li>
+                                                        <li><a href="#">교육보호</a></li>
+                                                        <li><a href="#">보건의료</a></li>
+                                                        <li><a href="#">식수위생</a></li>
+                                                        <li><a href="#">소득증대</a></li>
+                                                        <li><a href="#">아동권리옹호</a></li>
+                                                        <li><a href="#">인도적지원</a></li>
+                                                    </ul>
+                                                    <ul class="submenu-part">
+                                                        <li class="submenu-title"><a href="#">국내복지사업</a></li>
+                                                        <li><a href="#">학대피해아동보호 및 예방</a></li>
+                                                        <li><a href="#">심리정서지원</a></li>
+                                                        <li><a href="#">위기가정아동지원</a></li>
+                                                        <li><a href="#">지역사회복지지원</a></li>
+                                                        <li><a href="#">아동권리옹호</a></li>
+                                                    </ul>
+                                                    <ul class="submenu-part">
+                                                        <li class="submenu-title"><a href="#">세계시민교육</a></li>
+                                                        <li class="submenu-title"><a href="#">대북지원사업</a></li>
+                                                        <li class="submenu-title"><a href="#">아동권리연구소</a></li>
+                                                    </ul>
+                                                    <ul class="side-menu">
+                                                        <li>
+                                                            <a href="#">
+                                                                <img class="" src="/static/images/header_images/business1.jpg" alt="">
+                                                                <a class="side-menu-detail-btn" href="#">자세히보기</a>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <img src="/static/images/header_images/business2.jpg" alt="">
+                                                                <a class="side-menu-detail-btn" href="#">자세히보기</a>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="main-menu-btn" href="#">나의후원</a>
+                                    <ul class="menu-wrap">
+                                        <li>
+                                            <ul class="submenu">
+                                                <li>
+                                                    <ul class="submenu-part">
+                                                        <li class="submenu-title"><a href="#">나의 후원정보</a></li>
+                                                        <li><a href="#">후원내용확인/변경</a></li>
+                                                        <li><a href="#">후원회비내역조회</a></li>
+                                                        <li><a href="#">납부방법확인/변경</a></li>
+                                                    </ul>
+                                                    <ul class="submenu-part">
+                                                        <li class="submenu-title"><a href="#">나의 결연아동</a></li>
+                                                        <li><a href="#">아동정보</a></li>
+                                                        <li><a href="#">선물금 보내기</a></li>
+                                                        <li><a href="#">편지보내기</a></li>
+                                                        <li><a href="#">편지함</a></li>
+                                                    </ul>
+                                                    <ul class="submenu-part">
+                                                        <li class="submenu-title"><a href="#">온라인 출력</a></li>
+                                                        <li><a href="#">기부금영수증</a></li>
+                                                        <li><a href="#">회원증서</a></li>
+                                                        <li><a href="#">후원금영수증</a></li>
+                                                        <li><a href="#">후원활동증명서</a></li>
+                                                    </ul>
+                                                    <ul class="submenu-part">
+                                                        <li class="submenu-title"><a href="#">개인정보확인/변경</a></li>
+                                                        <li class="submenu-title"><a href="#">나의 문의함</a></li>
+                                                        <li class="submenu-title"><a href="#">나의 참여내역</a></li>
+                                                        <li class="submenu-title"><a href="#">회원자료실</a></li>
+                                                    </ul>
+                                                    <ul class="side-link">
+                                                        <li class="submenu-title"><a href="#">기부금영수증</a></li>
+                                                        <li class="submenu-title"><a href="#">FAQ/1:1문의</a></li>
+                                                        <li><a href="#">회원참여이벤트</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="header-side">
+                            <a href="#"><img src="/static/images/header_images/search_btn_big.png" alt=""></a>
+                            <a class="direct-donation-btn" href="/payment/support_step1">바로후원하기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script src="/static/js/account/principal.js"></script>
+            <script src="/static/js/header.js"></script>
+        </header>
 
+        <!-- main -->
+        <main>
+            <section class="title-wrapper">
+                <div class="join-title">
+                    <h3>관리자 페이지</h3>
+                    <h6>굿네이버스 '관리자용' 페이지입니다.</h6>
+                </div>
+            </section>
+            <section class="donation-add-wrapper">
+                <div class="admin-side">
+                    <div class="side-content-menulist">
+                        <h5>후원 관련 정보</h5>
+                        <a class="side-content-menu" href="/">- 후원 조회</a>
+                        <a class="side-content-menu" href="#">- 후원 등록</a>
+                    </div>
+                </div>
+                <div class="admin-main">
+                    <h2 class="admin-title">후원 등록</h2>
+                    <div class="regist-header">    
+                        <select class="donation-inputs cagetory-select">
+                        </select>
+                        <input type="text" class="donation-inputs donation-name" placeholder="후원명">
+                    </div>
+                    <input type="text" class="donation-inputs donation-text" placeholder="후원내용">   
+                    <form enctype="multipart/form-data">
+                        <input type="file" class="files-input" name="files" multiple>
+                    </form>
+                    <button class="btn regist-button img-add-button">사진 등록</button>
+                    <ul class="file-list">
+
+                    </ul>
+                    <button class="btn regist-button upload-button">후원 등록</button>
+                </div>
+            </section>
+        </main>
+
+        <!-- footer -->
+        <footer>
+            <!-- footer 사이트 내 링크 -->
+            <section class="gni-link">
+                <ul class="footer-link-list">
+                    <li>
+                        <a href="#">
+                            <img src="/static/images/footer/guide-btn.png" alt="">
+                            <span>후원가이드</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/static/images/footer/letter-btn.png" alt="">
+                            <span>희망편지쓰기</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/static/images/footer/club-join-btn.png" alt="">
+                            <span>더네이버스클럽</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/static/images/footer/market-btn.png" alt="">
+                            <span>좋은이웃가게</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/static/images/footer/corp-donation-btn.png" alt="">
+                            <span>기업후원</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            
+            <!-- footer 회사정보 -->
+            <section class="footer-info">
+                <div class="footer-info-group">
+                    <div>
+                        <p>서울 영등포구 버드나루로 13 굿네이버스회관</p>
+                        <p>사단법인 굿네이버스 인터내셔날 | 사업자등록번호 105-82-13183 | 대표자 이일하</p>
+                        <p>사회복지법인 굿네이버스 | 사업자등록번호 105-82-10319 | 대표자 이호균</p>
+                    </div>
+                    <div>
+                        <p>회원상담센터 1544-7944</p>
+                        <p>대표전화 02-6717-4000</p>
+                        <p>Copyright © GNI all right reserved</p>
+                    </div>
+                    <a href="#"><img src="/static/images/footer/Logo_small.png" alt=""></a>
+                </div>
+            </section>
+            <!-- footer 약관, sns버튼 -->
+            <section class="footer-bottom-wrap">
+                <div class="footer-bottom">
+                    <ul class="footer-bottom-list">
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">이메일무단수집거부</a></li>
+                        <li><a href="#">인재채용</a></li>
+                        <li><a href="#">후원문의</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">사이트맵</a></li>
+                        <li><a href="#">브랜드가이드라인</a></li>
+                        <li><a href="#">세이프가딩정책</a></li>
+                    </ul>
+                    <ul class="sns-group">
+                        <li><a href="#"><img src="/static/images/footer/sns/kakaofriend.png"><span>카카오톡 친구추가</span></a></li>
+                        <li><a href="#"><img src="/static/images/footer/sns/instagram.png"></a></li>
+                        <li><a href="#"><img src="/static/images/footer/sns/facebook.png"></a></li>
+                        <li><a href="#"><img src="/static/images/footer/sns/twitter.png"></a></li>
+                        <li><a href="#"><img src="/static/images/footer/sns/blog.png"></a></li>
+                        <li><a href="#"><img src="/static/images/footer/sns/kakaostory.png"></a></li>
+                        <li><a href="#"><img src="/static/images/footer/sns/youtube_link_btn.png"></a></li>
+                    </ul>
+                </div>
+            </section>
+        </footer>
+    </div>
+    <script src="/static/js/admin/donation_add.js"></script>
 </body>
 </html>
