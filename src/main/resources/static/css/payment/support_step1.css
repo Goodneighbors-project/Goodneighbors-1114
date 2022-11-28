@@ -164,7 +164,7 @@ body {
 }
 
 .support-donate-table .row2 {
-    display: flex;
+    display: none;
     padding-bottom: 28px;
 }
 
