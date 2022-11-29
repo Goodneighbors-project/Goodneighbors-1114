@@ -7,7 +7,9 @@ let mainMenuList = document.querySelectorAll(".main-menu > li");
 let subMenu = document.querySelectorAll(".submenu");
 
 for(var i = 0; mainMenuList.length; i++){
-    mainMenuList[i].addEventListener('mouseover', function(){
+    mainMenuList[i].addEventListener
+    
+    stener('mouseover', function(){
         header.style.height = "480px"
     });
 
