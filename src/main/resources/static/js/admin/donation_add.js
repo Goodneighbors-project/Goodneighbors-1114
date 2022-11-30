@@ -1,10 +1,10 @@
-class Option{
+class OptionService{
 
     static #instance = null;
 
     static getInstance(){
         if(this.#instance == null){
-            this.#instance = new Option();
+            this.#instance = new OptionService();
         }
 
         return this.#instance;
@@ -16,17 +16,18 @@ class Option{
 
     setCategorySelectOptions(){
 
-        const categorySelect = document.querySelector(".cagetory-select");
+        const categorySelect = document.querySelector(".category-select");
 
         categorySelect.innerHTML = `<option value="none">카테고리</option>`;
 
         const responseData = CommonApi.getInstance().getCategoryList();
 
+        console.log(responseData)
         if(responseData != null){
             
             responseData.forEach(donation => {
 
-                categorySelect.innerHTML = `<option value="${donation.id}">${donation.name}</option>`;
+                categorySelect.innerHTML += `<option value="${donation.category_id}">${donation.category_name}</option>`;
             });
         }
     }
@@ -106,7 +107,7 @@ class DonationImgFile {
   
     constructor() {
         this.addFileInputEvent();
-        this.sumbit();
+        this.submit();
     }
 
     
@@ -199,7 +200,7 @@ class DonationImgFile {
         });
     }
     
-    sumbit() {
+    submit() {
         const registerButton = document.querySelector(".upload-button");
         registerButton.onclick = () => {
 
@@ -221,7 +222,7 @@ class DonationImgFile {
   
   
 window.onload = () => {
-
-    Option.getInstance();
+    CommonApi.getInstance();
+    OptionService.getInstance();
     DonationImgFile.getInstance();
 }
