@@ -45,6 +45,9 @@ public class DonationManagementServiceImpl implements DonationManagementService{
     @Override
     public void donationRegisterMst(DonationRegisterReqDto donationRegisterReqDto) throws Exception {
 
+        int resultCount = 0;
+        int donationPkId = 0;
+
         List<MultipartFile> files = donationRegisterReqDto.getFiles();
         List<DonationImg> donationImgs = null;
 
@@ -56,6 +59,7 @@ public class DonationManagementServiceImpl implements DonationManagementService{
             errorMap.put("register", "빈칸을 허용하지 않습니다.");
             throw new CustomValidationException("사진을 제외하고는 빈칸을 허용하지 않습니다.", errorMap);
         }
+
     }
 
     private List<DonationImg> getDonationImgFiles(List<MultipartFile> files, int donationId){

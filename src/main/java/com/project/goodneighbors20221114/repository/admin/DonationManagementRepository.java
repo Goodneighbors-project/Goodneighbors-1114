@@ -12,7 +12,7 @@ import java.util.Map;
 public interface DonationManagementRepository {
 
     public List<DonationCategory> getCategoryList() throws Exception;
-    public int saveDonationMst(Donation donation) throws Exception;
+    public int saveDonation(Donation donation) throws Exception;
     public int saveDonationImg(List<DonationImg> donationImgs) throws Exception;
     public int deleteDonationImg(Map<String, String> map) throws Exception;
 }
