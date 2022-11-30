@@ -6,5 +6,4 @@ import java.util.List;
 
 @Mapper
 public interface DonationRepository {
-    public List<>
 }
