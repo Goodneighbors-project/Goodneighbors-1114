@@ -17,7 +17,7 @@
             donation_category
     </select>
 
-    <insert id="saveDonationMst" parameterType="com.project.goodneighbors20221114.domain.Donation">
+    <insert id="saveDonation" parameterType="com.project.goodneighbors20221114.domain.Donation">
         insert into
             donation_mst
         values(
@@ -30,7 +30,7 @@
         )
     </insert>
 
-    <insert id="saveDonationImg" parameterType="list">
+    <insert id="saveDonationImg" parameterType="java.util.List">
         insert into
             donation_image_mst
         values
