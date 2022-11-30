@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.project.goodneighbors20221114.repository.admin.DonationManagementRepository">
+    <resultMap id="donation_category" type="com.project.goodneighbors20221114.domain.DonationCategory">
+        <result property="category_id" column="category_id"/>
+        <result property="category_name" column="category_name"/>
+    </resultMap>
+
+    <select id="getCategoryList" resultMap="donation_category">
+        select
+            category_id,
+            category_name
+        from
+            donation_category
+    </select>
+
+    <insert id="saveDonationMst" parameterType="com.project.goodneighbors20221114.domain.Donation">
+        insert into
+            donation_mst
+        values(
+            0,
+            #{category_id},
+            #{donation_name},
+            #{donation_contents},
+            now(),
+            now()
+        )
+    </insert>
+
+    <insert id="saveDonationImg" parameterType="list">
+        insert into
+            donation_image_mst
+        values
+        <foreach collection="List" item="img" separator=",">
+            (
+                0,
+                #{img.donation_id},
+                #{img.origin_name},
+                #{img.save_name},
+                now(),
+                now()
+            )
+        </foreach>
+    </insert>
+</mapper>
