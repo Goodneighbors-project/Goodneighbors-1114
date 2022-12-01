@@ -8,7 +8,7 @@
 </head>
 <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 <link rel="stylesheet" href="/static/css/style.css">
-<link rel="stylesheet" href="/static/css/payment/support_step1.css">
+<link rel="stylesheet" href="/static/css/payment/support_step2.css">
 <body>
     <div id="wrapper">
         <main id="container" class="support-pay">
@@ -45,9 +45,99 @@
                     <div class="donate-selects">
                         <div class="con">
                             <div class="support-donate-pay-con">
-                                
-                                
-                                        
+                                <div class="support-donate-tit">
+                                    <h6>
+                                        후원회원 여부 확인
+                                    </h6>
+                                </div>
+                                <div class="write-form-table">
+                                    <table>
+                                        <colgroup>
+                                            <col width="250px">
+                                            <col width="*">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>회원구분 *</th>
+                                                <td>
+                                                    <div class="radio-check-box">
+                                                        <div class="radio-box w33 member-type">
+                                                            <div class="radio">
+                                                                <input type="radio" id="member1" name="member" title="후원구분-개인">
+                                                                <label for="member1">개인</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="radio-box w33 member-type">
+                                                            <div class="radio">
+                                                                <input type="radio" id="member1" name="member" title="후원구분-개인">
+                                                                <label for="member1">기업·단체</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>후원회원명 *</th>
+                                                <td>
+                                                    <div class="name-box">
+                                                        <div class="input-box">
+                                                            <input type="text" name="memname1" id="memname1" title="이름을 입력해주세요." placeholder="이름을 입력해주세요">
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>기부금 영수증</th>
+                                                <td>
+                                                    <div class="check-box">
+                                                        <div class="check">
+                                                            <input type="checkbox" id="recipt" name="recipt">
+                                                            <label for="recipt">발급 신청</label>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>생년월일 *</th>
+                                                <td>
+                                                    <div class="input-box birth-box outline-box">
+                                                        <input type="number" name="year" id="year" class="maxLengthNext" pattern="\d*" maxlength="4" max="4" placeholder="YYYY">
+                                                        <input type="number" name="month" id="month" class="maxLengthNext" pattern="\d*" maxlength="2" max="2" placeholder="MM">
+                                                        <input type="number" name="day " id="day" class="maxLengthNext" pattern="\d*" maxlength="2" max="2" placeholder="DD">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>성별 *</th>
+                                                <td>
+                                                    <div class="radio-check-box">
+                                                        <div class="radio-box w33 member-type">
+                                                            <div class="radio">
+                                                                <input type="radio" id="member1" name="member" title="후원구분-개인">
+                                                                <label for="member1">남</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="radio-box w33 member-type">
+                                                            <div class="radio">
+                                                                <input type="radio" id="member1" name="member" title="후원구분-개인">
+                                                                <label for="member1">여</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>연락처 *</th>
+                                                <td>
+                                                    <div class="input-box phone-box outline-box">
+                                                        <input type="number" name="phone-number " id="phone-number" class="phonenumber" placeholder="-빼고 입력해주세요">
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                </div>        
                                 <a href="/pay/support_step2" class="btn btn-next btn-ga-send">다음단계</a>
                             </div>
                         </div>
@@ -65,6 +155,6 @@
             </section>
         </main>
     </div>
-    <script src="/static/js/support_pay/support_step1.js"></script>
+    <script src="/static/js/support_pay/support_step2.js"></script>
 </body>
 </html>
