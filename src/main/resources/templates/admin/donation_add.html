@@ -1,18 +1,19 @@
 <!DOCTYPE html>
-<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>굿네이버스 공식 홈페이지 | 세상을 위한 좋은 변화, 굿네이버스</title>
+    <title>관리자 페이지</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/header.css">
+    <link rel="stylesheet" href="/static/css/footer.css">
+    <link rel="stylesheet" href="/static/css/admin/admin.css">
 </head>
-<script src="https://code.jquery.com/jquery-latest.min.js"></script>
-<link rel="stylesheet" href="/static/css/style.css">
-<link rel="stylesheet" href="/static/css/header.css">
-<link rel="stylesheet" href="/static/css/footer.css">
-<link rel="stylesheet" href="/static/css/account/complete.css">
 <body>
     <div id="wrapper">
+        <!-- header -->
         <header>
             <div class="header-wrap">
                 <div class="header-group">
@@ -252,102 +253,124 @@
             <script src="/static/js/account/principal.js"></script>
             <script src="/static/js/header.js"></script>
         </header>
-        <section id="container">
-            <div class="compl-main">
-                <div class="complmain-left">
-                    <img src="/static/images/account/complete-images/logo.png">
+
+        <!-- main -->
+        <main>
+            <section class="title-wrapper">
+                <div class="join-title">
+                    <h3>관리자 페이지</h3>
+                    <h6>굿네이버스 '관리자용' 페이지입니다.</h6>
                 </div>
-                <div class="complmain-right">
-                    <h1>회원가입을 축하합니다!</h1><br>
-                    <p>홈페이지로 이동하여 후원을 해보세요.</p>
-                    <div class="compl-btns">
-                        <button type="button" class="btn-login">로그인</button>
-                        <button type="button" class="btn-gomain">홈으로</button>
+            </section>
+            <section class="donation-add-wrapper">
+                <div class="admin-side">
+                    <div class="side-content-menulist">
+                        <h5>후원 관련 정보</h5>
+                        <a class="side-content-menu" href="/">- 후원 조회</a>
+                        <a class="side-content-menu" href="#">- 후원 등록</a>
                     </div>
                 </div>
-            </div>
-        </section>
+                <div class="admin-main">
+                    <h2 class="admin-title">후원 등록</h2>
+                    <div class="regist-header">    
+                        <select class="donation-inputs category-select">
+                        </select>
+                        <input type="text" class="donation-inputs donation-name" placeholder="후원명">
+                    </div>
+                    <input type="text" class="donation-inputs donation-text" placeholder="후원내용">   
+                    <form enctype="multipart/form-data">
+                        <input type="file" class="files-input" name="files" multiple>
+                    </form>
+                    <button class="btn regist-button img-add-button">사진 등록</button>
+                    <ul class="file-list">
+
+                    </ul>
+                    <button class="btn regist-button upload-button">후원 등록</button>
+                </div>
+            </section>
+        </main>
 
         <!-- footer -->
-    <footer>
-        <!-- footer 사이트 내 링크 -->
-        <section class="gni-link">
-            <ul class="footer-link-list">
-                <li>
-                    <a href="#">
-                        <img src="/static/images/footer/guide-btn.png" alt="">
-                        <span>후원가이드</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="/static/images/footer/letter-btn.png" alt="">
-                        <span>희망편지쓰기</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="/static/images/footer/club-join-btn.png" alt="">
-                        <span>더네이버스클럽</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="/static/images/footer/market-btn.png" alt="">
-                        <span>좋은이웃가게</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <img src="/static/images/footer/corp-donation-btn.png" alt="">
-                        <span>기업후원</span>
-                    </a>
-                </li>
-            </ul>
-        </section>
-        <!-- footer 회사정보 -->
-        <section class="footer-info">
-            <div class="footer-info-group">
-                <div>
-                    <p>서울 영등포구 버드나루로 13 굿네이버스회관</p>
-                    <p>사단법인 굿네이버스 인터내셔날 | 사업자등록번호 105-82-13183 | 대표자 이일하</p>
-                    <p>사회복지법인 굿네이버스 | 사업자등록번호 105-82-10319 | 대표자 이호균</p>
-                </div>
-                <div>
-                    <p>회원상담센터 1544-7944</p>
-                    <p>대표전화 02-6717-4000</p>
-                    <p>Copyright © GNI all right reserved</p>
-                </div>
-                <a href="#"><img src="/static/images/footer/Logo_small.png" alt=""></a>
-            </div>
-        </section>
-        <!-- footer 약관, sns버튼 -->
-        <section class="footer-bottom-wrap">
-            <div class="footer-bottom">
-                <ul class="footer-bottom-list">
-                    <li><a href="#">이용약관</a></li>
-                    <li><a href="#">개인정보처리방침</a></li>
-                    <li><a href="#">이메일무단수집거부</a></li>
-                    <li><a href="#">인재채용</a></li>
-                    <li><a href="#">후원문의</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">사이트맵</a></li>
-                    <li><a href="#">브랜드가이드라인</a></li>
-                    <li><a href="#">세이프가딩정책</a></li>
+        <footer>
+            <!-- footer 사이트 내 링크 -->
+            <section class="gni-link">
+                <ul class="footer-link-list">
+                    <li>
+                        <a href="#">
+                            <img src="/static/images/footer/guide-btn.png" alt="">
+                            <span>후원가이드</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/static/images/footer/letter-btn.png" alt="">
+                            <span>희망편지쓰기</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/static/images/footer/club-join-btn.png" alt="">
+                            <span>더네이버스클럽</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/static/images/footer/market-btn.png" alt="">
+                            <span>좋은이웃가게</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/static/images/footer/corp-donation-btn.png" alt="">
+                            <span>기업후원</span>
+                        </a>
+                    </li>
                 </ul>
-                <ul class="sns-group">
-                    <li><a href="#"><img src="/static/images/footer/sns/kakaofriend.png"><span>카카오톡 친구추가</span></a></li>
-                    <li><a href="#"><img src="/static/images/footer/sns/instagram.png"></a></li>
-                    <li><a href="#"><img src="/static/images/footer/sns/facebook.png"></a></li>
-                    <li><a href="#"><img src="/static/images/footer/sns/twitter.png"></a></li>
-                    <li><a href="#"><img src="/static/images/footer/sns/blog.png"></a></li>
-                    <li><a href="#"><img src="/static/images/footer/sns/kakaostory.png"></a></li>
-                    <li><a href="#"><img src="/static/images/footer/sns/youtube_link_btn.png"></a></li>
-                </ul>
-            </div>
-        </section>
-    </footer>
-</div>
-<script src="/static/js/account/complete.js"></script>
+            </section>
+            
+            <!-- footer 회사정보 -->
+            <section class="footer-info">
+                <div class="footer-info-group">
+                    <div>
+                        <p>서울 영등포구 버드나루로 13 굿네이버스회관</p>
+                        <p>사단법인 굿네이버스 인터내셔날 | 사업자등록번호 105-82-13183 | 대표자 이일하</p>
+                        <p>사회복지법인 굿네이버스 | 사업자등록번호 105-82-10319 | 대표자 이호균</p>
+                    </div>
+                    <div>
+                        <p>회원상담센터 1544-7944</p>
+                        <p>대표전화 02-6717-4000</p>
+                        <p>Copyright © GNI all right reserved</p>
+                    </div>
+                    <a href="#"><img src="/static/images/footer/Logo_small.png" alt=""></a>
+                </div>
+            </section>
+            <!-- footer 약관, sns버튼 -->
+            <section class="footer-bottom-wrap">
+                <div class="footer-bottom">
+                    <ul class="footer-bottom-list">
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">이메일무단수집거부</a></li>
+                        <li><a href="#">인재채용</a></li>
+                        <li><a href="#">후원문의</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">사이트맵</a></li>
+                        <li><a href="#">브랜드가이드라인</a></li>
+                        <li><a href="#">세이프가딩정책</a></li>
+                    </ul>
+                    <ul class="sns-group">
+                        <li><a href="#"><img src="/static/images/footer/sns/kakaofriend.png"><span>카카오톡 친구추가</span></a></li>
+                        <li><a href="#"><img src="/static/images/footer/sns/instagram.png"></a></li>
+                        <li><a href="#"><img src="/static/images/footer/sns/facebook.png"></a></li>
+                        <li><a href="#"><img src="/static/images/footer/sns/twitter.png"></a></li>
+                        <li><a href="#"><img src="/static/images/footer/sns/blog.png"></a></li>
+                        <li><a href="#"><img src="/static/images/footer/sns/kakaostory.png"></a></li>
+                        <li><a href="#"><img src="/static/images/footer/sns/youtube_link_btn.png"></a></li>
+                    </ul>
+                </div>
+            </section>
+        </footer>
+    </div>
+    <script src="/static/js/admin/donation_add.js"></script>
 </body>
 </html>
