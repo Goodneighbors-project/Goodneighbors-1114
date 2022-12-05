@@ -1,5 +1,6 @@
 package com.project.goodneighbors20221114.domain;
 
+import com.project.goodneighbors20221114.dto.DonationCategoryListDto;
 import com.project.goodneighbors20221114.dto.admin.CategoryResponseDto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,5 +22,12 @@ public class DonationCategory {
                 .group_id(group_id)
                 .build();
 
+    }
+
+    public DonationCategoryListDto toListDto() {
+        return DonationCategoryListDto.builder()
+                .categoryId(category_id)
+                .categoryName(category_name)
+                .build();
     }
 }

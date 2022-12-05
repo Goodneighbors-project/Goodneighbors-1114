@@ -20,4 +20,16 @@ public class DonationServiceImpl implements DonationService{
     public List<DonationCategoryListDto> getDonationList(String category, int page) throws Exception {
         return null;
     }
+
+    @Override
+    public List<DonationCategoryListDto> getList() throws Exception {
+        List<DonationCategoryListDto> categoryList = new ArrayList<DonationCategoryListDto>();
+        donationRepository.getList().forEach(category -> {
+            categoryList.add(category.toListDto());
+        });
+
+        return categoryList;
+    }
+
+
 }

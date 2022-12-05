@@ -1,5 +1,6 @@
 package com.project.goodneighbors20221114.repository;
 
+import com.project.goodneighbors20221114.domain.DonationCategory;
 import com.project.goodneighbors20221114.domain.admin.DonationList;
 import org.apache.ibatis.annotations.Mapper;
 
@@ -9,5 +10,5 @@ import java.util.Map;
 @Mapper
 public interface DonationRepository {
 
-    public List<DonationList> getList(Map<String, Object> map) throws Exception;
+    public List<DonationCategory> getList()throws Exception;
 }
