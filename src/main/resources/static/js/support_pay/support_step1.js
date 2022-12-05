@@ -1,6 +1,4 @@
 
-
-
 const selectedAll = document.querySelector(".surport-selects");
 const layer = document.querySelector(".row2");
 
@@ -22,7 +20,7 @@ class DonationApi {
     getDonationData() {
         let responseData = null;
         const url = location.href;
-        const donaId = user.substring(url.lastIndexOf("/") + 1);
+        const category = user.substring(url.lastIndexOf("/") + 1);
 
         $.ajax({
             async: false,
@@ -45,16 +43,15 @@ class DonationSelect {
 
     constructor() {
         const responseData = DonationApi.getInstance().getDonationData();
-        this.addDonationListEvent(responseData);
-        this.addDonationDetail(responseData);
+        this.addDonationListEvent();
+        this.loadDonationTotal(responseData);
     }
 
     addDonationListEvent(responseData) {
         const donates = document.querySelector(".support-donate-table");
-        donates.innerHTML = '';
+        donates.innerHTML = ``;
 
-        responseData.forEach(donation => {
-            this.donaId.push(donation.donaId);
+        responseData.donationCategory.forEach(category => {
             donates.innerHTML += `
             <div class="donate-payInput regular-pay">
                 <div class="row1">
@@ -69,15 +66,15 @@ class DonationSelect {
                     <h6>후원아동 수</h6>
                     <div class="donate-pay-radio">
                         <div>
-                            <input type="radio" id="regular-1-1" name="regular-1" value="1" title="1명" checked>
+                            <input type="radio" id="regular-1-1" name="regular-1" value="1" title="1명">
                             <label for="regular-1-1">1명</label>
                         </div>
                         <div>
-                            <input type="radio" id="regular-1-2" name="regular-1" value="2" title="2명" checked>
+                            <input type="radio" id="regular-1-2" name="regular-1" value="2" title="2명">
                             <label for="regular-1-2">2명</label>
                         </div>
                         <div>
-                            <input type="radio" id="regular-1-3" name="regular-1" value="3" title="3명" checked>
+                            <input type="radio" id="regular-1-3" name="regular-1" value="3" title="3명">
                             <label for="regular-1-3">3명</label>
                         </div>
                     </div>
@@ -90,23 +87,29 @@ class DonationSelect {
                     </div>
                     <div class="donate-pay-total">
                         총
-                        <span>30,000</span>
+                        <span clas="donate-total></span>
                         원
                     </div>
                 </div>
             </div>
             `;
         });
+        this.loadDonationTotal();
+        
     }
 
-    addDonationDetail() { 
-        const checkbox = document.getElementById("regular-1");
-        const donateList = document.querySelector(".row2");
+    loadDonationTotal() {
+        const donationTotal = document.querySelector(".total")
+        const donationprice = document.querySelector(".donate-total");
+        let listVar = $('input[name=regular-1]:checked').val();
 
-        const is_checked = checkbox.checked;
+        donationprice.textContent = listVar * 30000;
 
-        donateList.classList.toggle(".cf") = is_checked;
+        donationTotal.innerHTML += `
+            <span></span>
+        `;
     }
+
 }
 
 window.onload = () => {

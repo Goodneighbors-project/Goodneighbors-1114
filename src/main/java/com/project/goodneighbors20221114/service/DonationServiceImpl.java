@@ -15,18 +15,9 @@ import java.util.Map;
 public class DonationServiceImpl implements DonationService{
 
     private final DonationRepository donationRepository;
+
     @Override
-    public List<DonationCategoryListDto> getDonationList(String category) throws Exception {
-
-        List<DonationRepository> supportList = new ArrayList<DonationRepository>();
-
-        Map<String, Object> map = new HashMap<String, Object>();
-        map.put("category", category);
-
-        donationRepository.getList(map).forEach(donation -> {
-            supportList.add(donation.toDto());
-        });
-
+    public List<DonationCategoryListDto> getDonationList(String category, int page) throws Exception {
         return null;
     }
 }

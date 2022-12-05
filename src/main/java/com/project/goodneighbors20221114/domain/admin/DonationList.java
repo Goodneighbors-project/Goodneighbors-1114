@@ -2,11 +2,9 @@ package com.project.goodneighbors20221114.domain.admin;
 
 import com.project.goodneighbors20221114.dto.DonationCategoryListDto;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Data

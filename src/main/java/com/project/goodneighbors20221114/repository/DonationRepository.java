@@ -8,5 +8,6 @@ import java.util.Map;
 
 @Mapper
 public interface DonationRepository {
+
     public List<DonationList> getList(Map<String, Object> map) throws Exception;
 }

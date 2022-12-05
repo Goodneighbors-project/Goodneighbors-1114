@@ -5,5 +5,5 @@ import com.project.goodneighbors20221114.dto.DonationCategoryListDto;
 import java.util.List;
 
 public interface DonationService {
-    public List<DonationCategoryListDto> getDonationList(String category) throws Exception;
+    public List<DonationCategoryListDto> getDonationList(String category, int page) throws Exception;
 }

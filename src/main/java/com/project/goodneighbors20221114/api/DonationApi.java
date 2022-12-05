@@ -16,9 +16,10 @@ public class DonationApi {
 
     private final DonationService donationService;
     @GetMapping("/support/{category}")
-    public ResponseEntity<?>  getDonations(@PathVariable String category) throws Exception {
-        return ResponseEntity.ok(new CMRespDto<>("Successfully",donationService.getDonationList(category)));
+    public ResponseEntity<?>  getSupports(@PathVariable String category, int page) throws Exception {
+        return ResponseEntity.ok(new CMRespDto<>("Successfully",donationService.getDonationList(category, page)));
     }
+
 
 
 }
