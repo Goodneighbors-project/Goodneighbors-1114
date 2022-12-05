@@ -5,9 +5,8 @@ import lombok.Data;
 
 @Data
 @Builder
-public class DonationListDto {
+public class DonationCategoryListDto {
     private int categoryId;
     private String categoryName;
-    private int groupId;
     private String mainImg;
 }
