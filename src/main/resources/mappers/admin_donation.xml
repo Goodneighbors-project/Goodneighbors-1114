@@ -30,7 +30,7 @@
         )
     </insert>
 
-    <insert id="saveDonationImg" parameterType="java.util.List">
+    <insert id="saveDonationImg" parameterType="list">
         insert into
             donation_image_mst
         values

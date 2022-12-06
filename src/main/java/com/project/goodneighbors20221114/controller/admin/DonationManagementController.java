@@ -12,4 +12,9 @@ public class DonationManagementController {
     public String donationRegister(){
         return "admin/donation_add";
     }
+
+    @GetMapping("/donation/check")
+    public String donationCheck(){
+        return "admin/donation_check";
+    }
 }

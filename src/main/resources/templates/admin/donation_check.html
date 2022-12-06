@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/css/header.css">
     <link rel="stylesheet" href="/static/css/footer.css">
-    <link rel="stylesheet" href="/static/css/admin/donation_add.css">
+    <link rel="stylesheet" href="/static/css/admin/donation_check.css">
 </head>
 <body>
     <div id="wrapper">
@@ -271,21 +271,183 @@
                     </div>
                 </div>
                 <div class="admin-main">
-                    <h2 class="admin-title">후원 등록</h2>
-                    <div class="regist-header">    
-                        <select class="donation-inputs category-select">
+                    <h2 class="admin-title">상품조회</h2>
+                    <div class="search-container">    
+                        <select class="category-select donation-inputs">
                         </select>
-                        <input type="text" class="donation-inputs donation-name" placeholder="후원명">
+                        <div class="search-group">
+                            <input type="text" class="donation-search donation-inputs" placeholder="후원명">
+                            <button type="button" class="search-button">검색</button>
+                        </div>
                     </div>
-                    <input type="text" class="donation-inputs donation-contents" placeholder="후원내용">   
-                    <form enctype="multipart/form-data">
-                        <input type="file" class="files-input" name="files" multiple>
-                    </form>
-                    <button class="btn regist-button img-add-button">사진 등록</button>
-                    <ul class="file-list">
-
+                    <table class="donation-list">
+                        <thead>
+                            <tr>
+                                <th>후원코드</th>
+                                <th>카테고리</th>
+                                <th>후원명</th>
+                                <th>상세</th>
+                                <th>추가</th>
+                                <th>수정</th>
+                                <th>삭제</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>해외아동 1:1결연</td>
+                                <td>그린스쿨 프로젝트</td>
+                                <td><button type="button" class="btn">보기</button></td>
+                                <td><button type="button" class="btn">추가</button></td>
+                                <td><button type="button" class="btn">수정</button></td>
+                                <td><button type="button" class="btn">삭제</button></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>해외아동 1:1결연</td>
+                                <td>그린스쿨 프로젝트</td>
+                                <td><button type="button" class="btn">보기</button></td>
+                                <td><button type="button" class="btn">추가</button></td>
+                                <td><button type="button" class="btn">수정</button></td>
+                                <td><button type="button" class="btn">삭제</button></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>해외아동 1:1결연</td>
+                                <td>그린스쿨 프로젝트</td>
+                                <td><button type="button" class="btn">보기</button></td>
+                                <td><button type="button" class="btn">추가</button></td>
+                                <td><button type="button" class="btn">수정</button></td>
+                                <td><button type="button" class="btn">삭제</button></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>해외아동 1:1결연</td>
+                                <td>그린스쿨 프로젝트</td>
+                                <td><button type="button" class="btn">보기</button></td>
+                                <td><button type="button" class="btn">추가</button></td>
+                                <td><button type="button" class="btn">수정</button></td>
+                                <td><button type="button" class="btn">삭제</button></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>해외아동 1:1결연</td>
+                                <td>그린스쿨 프로젝트</td>
+                                <td><button type="button" class="btn">보기</button></td>
+                                <td><button type="button" class="btn">추가</button></td>
+                                <td><button type="button" class="btn">수정</button></td>
+                                <td><button type="button" class="btn">삭제</button></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>해외아동 1:1결연</td>
+                                <td>그린스쿨 프로젝트</td>
+                                <td><button type="button" class="btn">보기</button></td>
+                                <td><button type="button" class="btn">추가</button></td>
+                                <td><button type="button" class="btn">수정</button></td>
+                                <td><button type="button" class="btn">삭제</button></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>해외아동 1:1결연</td>
+                                <td>그린스쿨 프로젝트</td>
+                                <td><button type="button" class="btn">보기</button></td>
+                                <td><button type="button" class="btn">추가</button></td>
+                                <td><button type="button" class="btn">수정</button></td>
+                                <td><button type="button" class="btn">삭제</button></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>해외아동 1:1결연</td>
+                                <td>그린스쿨 프로젝트</td>
+                                <td><button type="button" class="btn">보기</button></td>
+                                <td><button type="button" class="btn">추가</button></td>
+                                <td><button type="button" class="btn">수정</button></td>
+                                <td><button type="button" class="btn">삭제</button></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>해외아동 1:1결연</td>
+                                <td>그린스쿨 프로젝트</td>
+                                <td><button type="button" class="btn">보기</button></td>
+                                <td><button type="button" class="btn">추가</button></td>
+                                <td><button type="button" class="btn">수정</button></td>
+                                <td><button type="button" class="btn">삭제</button></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>해외아동 1:1결연</td>
+                                <td>그린스쿨 프로젝트</td>
+                                <td><button type="button" class="btn">보기</button></td>
+                                <td><button type="button" class="btn">추가</button></td>
+                                <td><button type="button" class="btn">수정</button></td>
+                                <td><button type="button" class="btn">삭제</button></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>해외아동 1:1결연</td>
+                                <td>그린스쿨 프로젝트</td>
+                                <td><button type="button" class="btn">보기</button></td>
+                                <td><button type="button" class="btn">추가</button></td>
+                                <td><button type="button" class="btn">수정</button></td>
+                                <td><button type="button" class="btn">삭제</button></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>해외아동 1:1결연</td>
+                                <td>그린스쿨 프로젝트</td>
+                                <td><button type="button" class="btn">보기</button></td>
+                                <td><button type="button" class="btn">추가</button></td>
+                                <td><button type="button" class="btn">수정</button></td>
+                                <td><button type="button" class="btn">삭제</button></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>해외아동 1:1결연</td>
+                                <td>그린스쿨 프로젝트</td>
+                                <td><button type="button" class="btn">보기</button></td>
+                                <td><button type="button" class="btn">추가</button></td>
+                                <td><button type="button" class="btn">수정</button></td>
+                                <td><button type="button" class="btn">삭제</button></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>해외아동 1:1결연</td>
+                                <td>그린스쿨 프로젝트</td>
+                                <td><button type="button" class="btn">보기</button></td>
+                                <td><button type="button" class="btn">추가</button></td>
+                                <td><button type="button" class="btn">수정</button></td>
+                                <td><button type="button" class="btn">삭제</button></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>해외아동 1:1결연</td>
+                                <td>그린스쿨 프로젝트</td>
+                                <td><button type="button" class="btn">보기</button></td>
+                                <td><button type="button" class="btn">추가</button></td>
+                                <td><button type="button" class="btn">수정</button></td>
+                                <td><button type="button" class="btn">삭제</button></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>해외아동 1:1결연</td>
+                                <td>그린스쿨 프로젝트</td>
+                                <td><button type="button" class="btn">보기</button></td>
+                                <td><button type="button" class="btn">추가</button></td>
+                                <td><button type="button" class="btn">수정</button></td>
+                                <td><button type="button" class="btn">삭제</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ul class="page-number-list">
+                        <a href=""><li>&#60;</li></a>
+                        <a href=""><li>1</li></a>
+                        <a href=""><li>2</li></a>
+                        <a href=""><li>3</li></a>
+                        <a href=""><li>4</li></a>
+                        <a href=""><li>5</li></a>
+                        <a href=""><li>&#62;</li></a>
                     </ul>
-                    <button class="btn regist-button upload-button">후원 등록</button>
                 </div>
             </section>
         </main>

@@ -10,16 +10,16 @@ import java.util.List;
 public class DonationRegisterReqDto {
 
     private int id;
-    private int category_id;
-    private String donation_name;
-    private String donation_contents;
+    private int categoryId;
+    private String donationName;
+    private String donationContents;
     private List<MultipartFile> files;
 
     public Donation toEntity(){
         return Donation.builder()
-                .category_id(category_id)
-                .donation_name(donation_name)
-                .donation_contents(donation_contents)
+                .category_id(categoryId)
+                .donation_name(donationName)
+                .donation_contents(donationContents)
                 .build();
     }
 }

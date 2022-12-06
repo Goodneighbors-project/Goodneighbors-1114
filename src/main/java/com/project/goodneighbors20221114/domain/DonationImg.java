@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 public class DonationImg {
-
     private int id;
     private int donation_id;
     private String origin_name;

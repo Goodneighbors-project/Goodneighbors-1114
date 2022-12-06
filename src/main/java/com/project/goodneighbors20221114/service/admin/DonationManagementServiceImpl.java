@@ -3,6 +3,7 @@ package com.project.goodneighbors20221114.service.admin;
 import com.project.goodneighbors20221114.domain.Donation;
 import com.project.goodneighbors20221114.domain.DonationImg;
 import com.project.goodneighbors20221114.dto.admin.CategoryResponseDto;
+import com.project.goodneighbors20221114.dto.admin.DonationImgReqDto;
 import com.project.goodneighbors20221114.dto.admin.DonationRegisterReqDto;
 import com.project.goodneighbors20221114.exception.CustomInternalServerErrorException;
 import com.project.goodneighbors20221114.exception.CustomValidationException;
@@ -31,11 +32,9 @@ public class DonationManagementServiceImpl implements DonationManagementService{
 
     @Override
     public List<CategoryResponseDto> getCategoryList() throws Exception {
-
         List<CategoryResponseDto> categoryResponseDtos = new ArrayList<CategoryResponseDto>();
 
         donationManagementRepository.getCategoryList().forEach(category -> {
-
             categoryResponseDtos.add(category.toDto());
         });
 
@@ -44,36 +43,30 @@ public class DonationManagementServiceImpl implements DonationManagementService{
 
     @Override
     public void donationRegisterMst(DonationRegisterReqDto donationRegisterReqDto) throws Exception {
-
-        int resultCount = 0;
-        int donationPkId = 0;
-
-        List<MultipartFile> files = donationRegisterReqDto.getFiles();
-        List<DonationImg> donationImgs = null;
-
-        Donation donation = donationRegisterReqDto.toEntity();
-
-        if(donation.getCategory_id() == 0 || donation.getDonation_name().equals("") || donation.getDonation_contents().equals("")){
-
-            Map<String, String> errorMap = new HashMap<String, String>();
-            errorMap.put("register", "빈칸을 허용하지 않습니다.");
-            throw new CustomValidationException("사진을 제외하고는 빈칸을 허용하지 않습니다.", errorMap);
+        if(donationManagementRepository.saveDonation(donationRegisterReqDto.toEntity()) == 0){
+            throw new CustomInternalServerErrorException("후원 등록 실패");
         }
 
     }
 
-    private List<DonationImg> getDonationImgFiles(List<MultipartFile> files, int donationId){
+    @Override
+    public void registerImg(DonationImgReqDto donationImgReqDto) throws Exception {
+        log.info("donationId >>> " + donationImgReqDto.getDonationId());
 
-        List<DonationImg> donationImgFiles = new ArrayList<DonationImg>();
+        if(donationImgReqDto.getFiles() == null){
+            Map<String, String> errorMap = new HashMap<String, String>();
+            errorMap.put("error", "이미지를 선택하지 않았습니다.");
+            throw new CustomValidationException("image Error", errorMap);
+        }
 
-        files.forEach(file -> {
+        List<DonationImg> donationImgs = new ArrayList<DonationImg>();
 
+        donationImgReqDto.getFiles().forEach(file -> {
             Resource resource = resourceLoader.getResource("classpath:static/upload/donation");
             String filePath = null;
 
             try {
                 if(!resource.exists()){
-
                     String tempPath = resourceLoader.getResource("classpath:static").getURI().toString();
                     tempPath = tempPath.substring(tempPath.indexOf("/") + 1);
 
@@ -83,39 +76,34 @@ public class DonationManagementServiceImpl implements DonationManagementService{
 
                 filePath = resource.getURI().toString();
                 filePath = filePath.substring(filePath.indexOf("/") + 1);
+                System.out.println(filePath);
+
             } catch (IOException e) {
 
                 throw new RuntimeException(e);
             }
 
-            String origin_name = file.getOriginalFilename();
-            String extension = origin_name.substring(origin_name.lastIndexOf("."));
-            String save_name = UUID.randomUUID().toString().replaceAll("-", "") + extension;
+            String originName = file.getOriginalFilename();
+            String extension = originName.substring(originName.lastIndexOf("."));
+            String savaName = UUID.randomUUID().toString().replaceAll("-", "") + extension;
 
-            Path path = Paths.get(filePath + "/" + save_name);
-
-            File f = new File(filePath + "/donation");
+            Path path = Paths.get(filePath + "/" + savaName);
 
             try {
-
                 Files.write(path, file.getBytes());
             } catch (IOException e) {
-
                 throw new CustomInternalServerErrorException(e.getMessage());
             }
 
-            DonationImg donationImg = DonationImg.builder()
-                    .donation_id(donationId)
-                    .origin_name(origin_name)
-                    .save_name(save_name)
-                    .build();
-
-            donationImgFiles.add(donationImg);
+            donationImgs.add(DonationImg.builder()
+                            .donation_id(donationImgReqDto.getDonationId())
+                            .origin_name(originName)
+                            .save_name(savaName)
+                            .build());
         });
 
-        return donationImgFiles;
+        donationManagementRepository.saveDonationImg(donationImgs);
     }
-
 }
 
 
