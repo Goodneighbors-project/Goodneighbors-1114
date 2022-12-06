@@ -1,7 +1,3 @@
-
-
-
-
 class DonationApi {
     static #instance = null;
     static getInstance() {
@@ -53,66 +49,88 @@ class DonationApi {
 
 class DonationSelect {
 
-    constructor() {
-        this.addDonationListEvent();
-        // this.loadDonationTotal(responseData);
-    }
+  constructor() {
+      this.addDonationListEvent();
+      // this.loadDonationTotal();
+  }
 
-    addDonationListEvent() {
-        let responseData = DonationApi.getInstance().getApi();
-        console.log(responseData);
-        const donates = document.querySelector(".support-donate-table");
+  addDonationListEvent() {
+    let responseData = DonationApi.getInstance().getApi();
+    console.log(responseData);
+    const donates = document.querySelector(".support-donate-table");
 
-        donates.innerHTML = ``;
+    donates.innerHTML = ``;
 
-        responseData.forEach(category => {
-            donates.innerHTML += `
-            <div class="donate-payInput regular-pay">
-                <div class="row1">
-                    <div class="check-box">
-                        <div class="check">
-                            <input type="checkbox" id="regular-${category.categoryId}" class="surport-selects" value="1">
-                            <label for="regular-${category.categoryId}">${category.categoryName}</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="row2 cf">
-                </div>
+    responseData.forEach(category => {
+        donates.innerHTML += `
+        <div class="donate-payInput regular-pay">
+          <div class="row1">
+              <div class="check-box">
+                  <div class="check">
+                      <input type="checkbox" id="regular-${category.categoryId}" class="support-selects" value="1">
+                      <label for="regular-${category.categoryId}">${category.categoryName}</label>
+                  </div>
+              </div>
+          </div>
+          <div id="invisible-${category.categoryId}" class="row2 invisible-area">
+            <div class="donate-pay-radio">
+              <div>
+                <input type="radio" id="regular-${category.categoryId}-1" name="regular-1" class="regular-1" value="1" title="1명">
+                <label for="regular-${category.categoryId}-1">1명</label>
+              </div>
+              <div>
+                  <input type="radio" id="regular-${category.categoryId}-2" name="regular-1" class="regular-1" value="2" title="2명">
+                  <label for="regular-${category.categoryId}-2">2명</label>
+              </div>
+              <div>
+                  <input type="radio" id="regular-${category.categoryId}-3" name="regular-1" class="regular-1" value="3" title="3명">
+                  <label for="regular-${category.categoryId}-3">3명</label>
+              </div>
             </div>
-            `;
-        });
-        // this.loadDonationTotal();
+            <div class="donate-pay-input input-box outline-box">
+                <input type="number" class="maxLengthNext onlyPrice" name="regular-input-1" placeholder="아동 수 직접 입력" title="아동 수를 직접입력해주세요.">
+                <label>명</label>
+            </div>
+            <div class="donate-pay-sinfo">
+                후원금액(1명) 월 30,000원
+            </div>
+            <div class="donate-pay-total">
+              총
+              <span class="select-donation-pay"></span>
+              원
+            </div>
+          </div>
+        </div>
+        `;
 
-        const selectedAll = document.querySelectorAll(".surport-selects");
-        const layer = document.querySelector(".row2");
+    });
+    const selected = document.querySelectorAll(".support-selects");
+    const layer = document.querySelectorAll(".row2");
 
-        selectedAll.onclick = () => {
-        layer.classList.toggle("invisible-area");
-}
-        
+    selected.forEach((select,index) => {
+      select.onclick = () => {
+        layer[index].classList.toggle("invisible-area");
+      }
+    });
+    this.loadDonationTotal();
+  }
+   
+  getCheckboxValue() {
+    let regular1 = document.getElementsByName("regular-1");
+    console.log(regular1[1].value);
+    const donatepay = document.querySelector(".donationPay");
+    for (let i = 0; i < regular1.length-1; i++) {
+      regular1[i].onclick = () => {
+        if(regular1[i].checked) {
+          document.getElementById('donationPay').innerText = Number(regular1[i].value * 30000);
+        }
+      }
     }
+    
+  }
 
-    // loadDonationTotal() {
-    //     const donationTotal = document.querySelector(".total")
-    //     const donationprice = document.querySelector(".donate-total");
-    //     let listVar = $('input[name=regular-1]:checked').val();
-
-    //     donationprice.textContent = listVar * 30000;
-
-    //     donationTotal.innerHTML += `
-    //         <span></span>
-    //     `;
-    // }
 
 }
-
-
-// const selectedAll = document.querySelector(".surport-selects");
-// const layer = document.querySelector(".row2");
-
-// selectedAll.onclick = () => {
-//     layer.classList.toggle("invisible-area");
-// }
 
 window.onload = () => {
     DonationApi.getInstance().getApi();
