@@ -1,3 +1,4 @@
+
 class DonationApi {
     static #instance = null;
     static getInstance() {
@@ -24,34 +25,14 @@ class DonationApi {
         });
         return responseData;
     }
-
-    // getDonationData() {
-    //     let responseData = null;
-    //     const url = location.href;
-    //     const category = url.substring(url.lastIndexOf("/") + 1);
-
-    //     $.ajax({
-    //         async: false,
-    //         type: "get",
-    //         url: "/api/surport/" + category,
-    //         dataType: "json",
-    //         success: response => {
-    //             responseData = response.data;
-    //         },
-    //         error: error => {
-    //             console.log(error);
-    //         }
-    //     });
-
-    //     return responseData;
-    // }
 }
 
 class DonationSelect {
 
   constructor() {
       this.addDonationListEvent();
-      // this.loadDonationTotal();
+      this.getCheckboxValue();
+      this.getInputBoxValue();
   }
 
   addDonationListEvent() {
@@ -88,7 +69,7 @@ class DonationSelect {
               </div>
             </div>
             <div class="donate-pay-input input-box outline-box">
-                <input type="number" class="maxLengthNext onlyPrice" name="regular-input-1" placeholder="아동 수 직접 입력" title="아동 수를 직접입력해주세요.">
+                <input type="number" id="regular-input" class="maxLengthNext onlyPrice" name="regular-input-1" placeholder="아동 수 직접 입력" title="아동 수를 직접입력해주세요.">
                 <label>명</label>
             </div>
             <div class="donate-pay-sinfo">
@@ -96,7 +77,7 @@ class DonationSelect {
             </div>
             <div class="donate-pay-total">
               총
-              <span class="select-donation-pay"></span>
+              <span id="donationPay" name="donationPay"></span>
               원
             </div>
           </div>
@@ -112,24 +93,33 @@ class DonationSelect {
         layer[index].classList.toggle("invisible-area");
       }
     });
-    this.loadDonationTotal();
   }
-   
+
   getCheckboxValue() {
     let regular1 = document.getElementsByName("regular-1");
-    console.log(regular1[1].value);
-    const donatepay = document.querySelector(".donationPay");
-    for (let i = 0; i < regular1.length-1; i++) {
-      regular1[i].onclick = () => {
-        if(regular1[i].checked) {
-          document.getElementById('donationPay').innerText = Number(regular1[i].value * 30000);
+    let donatePay = document.getElementsByName("donationPay");
+    
+    for(let j = 0; j < regular1.length; j++) {
+      regular1[j].onclick = () => {
+        console.log(Number(regular1[j].value))
+        if(regular1[j].checked) {
+          donatePay[parseInt(j/3)].innerHTML = Number(regular1[j].value) * Number(30000);
         }
       }
     }
-    
+  } 
+
+  getInputBoxValue() {
+    const inputValue = document.getElementById('regular-input');
+    const donatePay = document.getElementsByName("donationPay");
+    console.log(inputValue.value);
+    console.log(donatePay);
+    for(let i = 0; i < donatePay.length; i++) {
+      inputValue[i].onchange = () => {
+        donatePay[i].innerHTML = inputValue[i].value * 30000;
+      }
+    }
   }
-
-
 }
 
 window.onload = () => {
