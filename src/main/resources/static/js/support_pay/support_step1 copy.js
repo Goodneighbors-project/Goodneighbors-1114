@@ -1,9 +1,12 @@
 function totalchange() {
   let inputValue = document.getElementsByName("regular-input-1");
   let donationTotal = document.getElementsByName("donationPay");
+  let paytotal = 0;
+  const donaTotalPay = document.querySelector(".totalPay");
   for (let i = 0; i < donationTotal.length; i++){
-    console.log(inputValue[i].value);
     donationTotal[i].innerHTML = inputValue[i].value * Number(30000);
+    paytotal = Number(paytotal) + (inputValue[i].value * Number(30000));
+    donaTotalPay.innerHTML = paytotal;
   }
 }
 
@@ -52,7 +55,6 @@ class DonationSelect {
   constructor() {
     this.addDonationListEvent();
     this.getCheckboxValue();
-    this.getTotalPrice();
   }
 
   addDonationListEvent() {
@@ -118,24 +120,17 @@ class DonationSelect {
   getCheckboxValue() {
     let regular1 = document.getElementsByName("regular-1");
     let donatePay = document.getElementsByName("donationPay");
+    let paytotal = 0;
+    const donaTotalPay = document.querySelector(".totalPay");
     for(let i = 0; i < regular1.length; i++) {
         regular1[i].onclick = () => {
           console.log(Number(regular1[i].value))
           if(regular1[i].checked) {
             donatePay[parseInt(i/3)].innerHTML = Number(regular1[i].value) * Number(30000);
         }
+        paytotal = Number(paytotal) + Number(regular1[i].value * 30000);
+        donaTotalPay.innerHTML = paytotal;
       }
-    }
-  }
-
-  getTotalPrice() {
-    let donationTotal = document.getElementsByName("donationPay");
-    const donaTotalPay = document.querySelector(".totalPay");
-    let TotalSum = 0;
-    for (let i = 0; i < donationTotal.length; i++) {
-      console.log(donationTotal.value);
-      TotalSum = TotalSum + Number(donationTotal[i].value);
-      donaTotalPay.innerHTML = TotalSum;
     }
   }
 

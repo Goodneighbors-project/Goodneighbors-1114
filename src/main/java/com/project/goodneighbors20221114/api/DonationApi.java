@@ -24,6 +24,11 @@ public class DonationApi {
         return ResponseEntity.ok().body(new CMRespDto<>("success", donationService.getList()));
     }
 
+    @GetMapping("/user")
+    public ResponseEntity<?> getUsers(@PathVariable String name) throws Exception {
+        return null;
+    }
+
 
 
 }
