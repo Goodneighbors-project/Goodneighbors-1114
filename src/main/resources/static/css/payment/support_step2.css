@@ -105,6 +105,7 @@ body {
 }
 
 .support-donate-tit h6 {
+    margin-bottom: 30px;
     padding-bottom: 15px;
     border-bottom: 1px solid #dcdcdc;
     text-align: left;
@@ -152,6 +153,69 @@ table{
 }
 
 .radio-box .radio {
+    float: left;
+}
+
+.radio-box .radio input {
+    margin-top: 10px;
+    width: 20px;
+    height: 20px;
+    left: 5px;
+}
+
+.radio-box .radio label {
+    position:relative;
+    top: -2px;
+    font-size: 16px;
+    padding-left: 16px;
+    line-height: 6px;
+    cursor: pointer;
+}
+
+.input-box input[type='text']{
+    font-size: 16px;
+    text-indent: 20px;
+    height: 50px;
+    width: 615px;
+    border: 1px solid #DCDCDC;
+}
+
+.check-box .check input {
+    width: 25px;
+    height: 25px;
+}
+
+.check-box .check label {
+    position: relative;
+    top: -7px;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.birth-box {
+    padding: 0px;
+    width: 615px;
+    border: 1px solid #DCDCDC;
+    overflow: hidden;
+    text-align: center;
+}
+
+.birth-box input[type='number'] {
+    border: none;
+    width: 28%;
+    text-align: center;
+    text-indent: 0;
+    height: 48px;
+}
+
+.phone-box input[type='number'] {
+    padding: 13px 0 13px 20px;
+    margin-bottom: 0;
+    width: 615px;
+    overflow: hidden;
+    border: 1px solid #DCDCDC;
+    background: #fff;
+
     float: left;
 }
 

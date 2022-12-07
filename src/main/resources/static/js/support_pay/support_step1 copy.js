@@ -7,6 +7,18 @@ function totalchange() {
   }
 }
 
+// function TotalPay() {
+//   let donationTotal = document.getElementsByName("donationPay");
+//   const donaTotalPay = document.querySelector(".totalPay");
+//   let TotalSum = 0;
+//   for (let i = 0; i < donationTotal.length; i++) {
+//     console.log(donationTotal.value);
+//     TotalSum = TotalSum + Number(donationTotal[i].value);
+//     donaTotalPay.innerHTML = TotalSum;
+//   }
+
+// }
+
 class DonationApi {
     static #instance = null;
     static getInstance() {
@@ -38,8 +50,9 @@ class DonationApi {
 class DonationSelect {
 
   constructor() {
-      this.addDonationListEvent();
-      this.getCheckboxValue();
+    this.addDonationListEvent();
+    this.getCheckboxValue();
+    this.getTotalPrice();
   }
 
   addDonationListEvent() {
@@ -105,20 +118,30 @@ class DonationSelect {
   getCheckboxValue() {
     let regular1 = document.getElementsByName("regular-1");
     let donatePay = document.getElementsByName("donationPay");
-      for(let j = 0; j < regular1.length; j++) {
-        regular1[j].onclick = () => {
-          console.log(Number(regular1[j].value))
-          if(regular1[j].checked) {
-            donatePay[parseInt(j/3)].innerHTML = Number(regular1[j].value) * Number(30000);
-          }
+    for(let i = 0; i < regular1.length; i++) {
+        regular1[i].onclick = () => {
+          console.log(Number(regular1[i].value))
+          if(regular1[i].checked) {
+            donatePay[parseInt(i/3)].innerHTML = Number(regular1[i].value) * Number(30000);
         }
       }
-  } 
+    }
+  }
 
-  
+  getTotalPrice() {
+    let donationTotal = document.getElementsByName("donationPay");
+    const donaTotalPay = document.querySelector(".totalPay");
+    let TotalSum = 0;
+    for (let i = 0; i < donationTotal.length; i++) {
+      console.log(donationTotal.value);
+      TotalSum = TotalSum + Number(donationTotal[i].value);
+      donaTotalPay.innerHTML = TotalSum;
+    }
+  }
+
 }
 
 window.onload = () => {
-    DonationApi.getInstance().getApi();
-    new DonationSelect();
+  DonationApi.getInstance().getApi();
+  new DonationSelect();
 }
