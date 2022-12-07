@@ -2,7 +2,6 @@ package com.project.goodneighbors20221114.api.admin;
 
 import com.project.goodneighbors20221114.aop.annotation.LogAspect;
 import com.project.goodneighbors20221114.aop.annotation.ValidAspect;
-import com.project.goodneighbors20221114.domain.DonationImg;
 import com.project.goodneighbors20221114.dto.CMRespDto;
 import com.project.goodneighbors20221114.dto.admin.DonationImgReqDto;
 import com.project.goodneighbors20221114.dto.admin.DonationRegisterReqDto;
@@ -67,7 +66,5 @@ public class DonationManagementApi {
                 .body(new CMRespDto<>("Register Successfully", true));
 
     }
-
-
 
 }
