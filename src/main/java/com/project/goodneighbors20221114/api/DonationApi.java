@@ -2,6 +2,7 @@ package com.project.goodneighbors20221114.api;
 
 import com.project.goodneighbors20221114.dto.CMRespDto;
 import com.project.goodneighbors20221114.service.DonationService;
+import com.project.goodneighbors20221114.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class DonationApi {
 
     private final DonationService donationService;
+    private final UserService userService;
+
     @GetMapping("/support/{category}")
     public ResponseEntity<?>  getSupports(@PathVariable String category, int page) throws Exception {
         return ResponseEntity.ok(new CMRespDto<>("Successfully",donationService.getDonationList(category, page)));
@@ -24,9 +27,9 @@ public class DonationApi {
         return ResponseEntity.ok().body(new CMRespDto<>("success", donationService.getList()));
     }
 
-    @GetMapping("/user")
-    public ResponseEntity<?> getUsers(@PathVariable String name) throws Exception {
-        return null;
+    @GetMapping("/user/{userId}")
+    public ResponseEntity<?> getUsers(@PathVariable int userId) throws Exception {
+        return ResponseEntity.ok(new CMRespDto<>("Successfully", userService.getUser(userId)));
     }
 
 
