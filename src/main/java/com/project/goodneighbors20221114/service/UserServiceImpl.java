@@ -17,6 +17,14 @@ public class UserServiceImpl implements UserService{
         User user = accountRepository.getUser(userId);
 
 
-        return null;
+
+        UserRespDto dto = UserRespDto.builder()
+                .userId(user.getId())
+                .userName(user.getName())
+                .PhoneNumber(user.getPhone())
+                .build();
+
+
+        return dto;
     }
 }

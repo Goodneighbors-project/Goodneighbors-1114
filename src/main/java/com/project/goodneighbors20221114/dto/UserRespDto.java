@@ -8,6 +8,6 @@ import lombok.Data;
 public class UserRespDto {
 
     private int userId;
-    private String Name;
-    private String Email;
+    private String userName;
+    private String PhoneNumber;
 }

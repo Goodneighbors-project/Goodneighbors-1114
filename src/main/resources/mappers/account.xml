@@ -47,12 +47,9 @@
         select
             um.id,
             um.name,
-            um.email,
             um.phone
         from
             user_mst um
-        where
-            um.id = #{id}
     </select>
 
     <insert id="saveUser" parameterType="com.project.goodneighbors20221114.domain.User">
