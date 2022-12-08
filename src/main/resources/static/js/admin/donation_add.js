@@ -143,7 +143,7 @@ class DonationImgFile {
 
     constructor() {
         this.addFileInputEvent();
-//        this.addUploadEvent();
+        // this.addUploadEvent();
     }
 
     addUploadEvent() {

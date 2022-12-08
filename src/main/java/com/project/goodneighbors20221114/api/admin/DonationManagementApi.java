@@ -44,6 +44,7 @@ public class DonationManagementApi {
                 .body(new CMRespDto<>("get Successfully", donationManagementService.getCategoryList()));
     }
 
+    @LogAspect
     @ValidAspect
     @PostMapping("/donation/register")
     public ResponseEntity<?> donationRegister(@RequestBody DonationRegisterReqDto donationRegisterReqDto,
