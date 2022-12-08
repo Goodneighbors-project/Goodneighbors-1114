@@ -35,8 +35,8 @@ class UserData {
   }
 
   loadUserData(responseData) {
-    document.getElementById("memname1").textContent = responseData.userName;
-    document.getElementById("phone-number").textContent = responseData.PhoneNumber;
+    document.getElementById("memname1").innerHTML = responseData.userName;
+    document.getElementById("phone-number").innerHTML = responseData.PhoneNumber;
   }
 }
 

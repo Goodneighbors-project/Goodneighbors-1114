@@ -50,6 +50,8 @@
             um.phone
         from
             user_mst um
+        where
+            um.id = #{userId}
     </select>
 
     <insert id="saveUser" parameterType="com.project.goodneighbors20221114.domain.User">
