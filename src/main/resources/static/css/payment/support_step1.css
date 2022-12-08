@@ -163,11 +163,14 @@ body {
     cursor: pointer;
 }
 
-.support-donate-table .row2 {
-    display: flex;
-    padding-bottom: 28px;
+.invisible-area {
+    display: none;
+
 }
 
+.row2 {
+    padding-bottom:  28px;
+}
 .row2 h6 {
     width: 108px;
     line-height: 50px;
@@ -265,4 +268,55 @@ body {
     font-size: 21px;
     font-weight: 600;
     line-height: 50px;
+}
+
+.donate-pay-totalbox > div {
+    float: right;
+    padding-top: 33px;
+    width: 400px;
+    overflow: hidden;
+}
+
+.donate-pay-totalbox > div .txt {
+    float: left;
+    font-size: 18px;
+    line-height: 29px;
+}
+
+.total {
+    float: right;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.btn-next {
+    display: block;
+    margin: 75px auto 120px;
+    width: 400px;
+    height: 60px;
+    line-height: 60px;
+    border: none;
+
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+
+    background: #89a230;
+    color: #fff;
+}
+
+.support-donate-pay-info {
+    padding: 47px 0;;
+    text-align: center;
+    background: #ecf3e6;
+}
+
+.support-donate-pay-info h6 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.support-donate-pay-info p {
+    line-height: 23px;
 }

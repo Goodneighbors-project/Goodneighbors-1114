@@ -10,4 +10,9 @@ public class DonationController {
     public String getDonation() {
         return "payment/support_step1";
     }
+
+    @GetMapping("/payment/support_step2")
+    public String getDonationStep2() {
+        return "payment/support_step2";
+    }
 }

@@ -8,4 +8,5 @@ import lombok.Data;
 public class CategoryResponseDto {
     private int category_id;
     private String category_name;
+    private int group_id;
 }

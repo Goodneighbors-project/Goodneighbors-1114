@@ -35,12 +35,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .loginPage("/account/login")
                 .loginProcessingUrl("/account/login")
                 .failureHandler(new AuthFailureHandler())
+                .defaultSuccessUrl("/main")
+                .and()
+                .logout().logoutUrl("/logout")
+                .permitAll()
+                .logoutSuccessUrl("/main")
                 .and()
                 .oauth2Login()
+                .loginPage("/account/login")
                 .userInfoEndpoint()
-                .userService(principalOauth2Service)
-                .and()
-                .defaultSuccessUrl("/main");
+                .userService(principalOauth2Service);
     }
 
 }
