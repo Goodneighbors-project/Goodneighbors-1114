@@ -4,6 +4,7 @@ import com.project.goodneighbors20221114.domain.Donation;
 import com.project.goodneighbors20221114.domain.DonationImg;
 import com.project.goodneighbors20221114.dto.admin.CategoryResponseDto;
 import com.project.goodneighbors20221114.dto.admin.DonationImgReqDto;
+import com.project.goodneighbors20221114.dto.admin.DonationListDto;
 import com.project.goodneighbors20221114.dto.admin.DonationRegisterReqDto;
 import com.project.goodneighbors20221114.exception.CustomInternalServerErrorException;
 import com.project.goodneighbors20221114.exception.CustomValidationException;
@@ -103,6 +104,15 @@ public class DonationManagementServiceImpl implements DonationManagementService{
         });
 
         donationManagementRepository.saveDonationImg(donationImgs);
+    }
+
+    @Override
+    public List<DonationListDto> getDonationList() throws Exception {
+        List<DonationListDto> donationList = new ArrayList<DonationListDto>();
+        donationManagementRepository.getDonationTextList().forEach(category -> {
+            donationList.add(category.toDto());
+        });
+        return donationList;
     }
 }
 

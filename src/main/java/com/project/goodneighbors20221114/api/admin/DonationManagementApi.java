@@ -68,4 +68,9 @@ public class DonationManagementApi {
 
     }
 
+    @GetMapping("/donation/check")
+    public ResponseEntity<?> getDonationList()throws Exception {
+        return ResponseEntity.ok().body(new CMRespDto<>("DonationList Success", donationManagementService.getDonationList()));
+    }
+
 }

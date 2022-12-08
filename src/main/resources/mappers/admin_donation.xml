@@ -45,4 +45,13 @@
             )
         </foreach>
     </insert>
+    <select id="getDonationTextList" resultType="com.project.goodneighbors20221114.domain.admin.DonationText">
+        SELECT
+            dm.id,
+            dc.category_name AS category_id,
+            dm.donation_name
+        FROM
+            donation_mst dm
+        LEFT OUTER JOIN donation_category dc ON(dc.category_id = dm.category_id)
+    </select>
 </mapper>
