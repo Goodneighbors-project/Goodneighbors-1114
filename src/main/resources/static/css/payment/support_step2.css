@@ -208,6 +208,11 @@ table{
     height: 48px;
 }
 
+input[type='number']::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
 .phone-box input[type='number'] {
     padding: 13px 0 13px 20px;
     margin-bottom: 0;

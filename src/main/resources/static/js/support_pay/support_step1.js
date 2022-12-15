@@ -54,7 +54,8 @@ class DonationSelect {
 
   constructor() {
     this.addDonationListEvent();
-    this.getCheckboxValue();
+    this.getTotalPrice();
+    totalchange();
   }
 
   addDonationListEvent() {
@@ -109,6 +110,7 @@ class DonationSelect {
     });
     const selected = document.querySelectorAll(".support-selects");
     const layer = document.querySelectorAll(".row2");
+    this.getCheckboxValue();
 
     selected.forEach((select,index) => {
       select.onclick = () => {
@@ -120,17 +122,29 @@ class DonationSelect {
   getCheckboxValue() {
     let regular1 = document.getElementsByName("regular-1");
     let donatePay = document.getElementsByName("donationPay");
-    let paytotal = 0;
-    const donaTotalPay = document.querySelector(".totalPay");
+    // let paytotal = 0;
+    // const donaTotalPay = document.querySelector(".totalPay");
     for(let i = 0; i < regular1.length; i++) {
         regular1[i].onclick = () => {
+          // paytotal = 0;
           console.log(Number(regular1[i].value))
           if(regular1[i].checked) {
-            donatePay[parseInt(i/3)].innerHTML = Number(regular1[i].value) * Number(30000);
-        }
-        paytotal = Number(paytotal) + Number(regular1[i].value * 30000);
-        donaTotalPay.innerHTML = paytotal;
+            donatePay[parseInt(i/3)].innerText = Number(regular1[i].value) * Number(30000);
+          }
+          // paytotal = Number(paytotal) + Number(regular1[i].value * 30000);
+          // donaTotalPay.innerHTML = paytotal;
       }
+    }
+  }
+
+  getTotalPrice() {
+    let regular1 = document.getElementsByName("regular-1");
+    const donaTotalPay = document.querySelector(".totalPay");
+    let paytotal = 0;
+    
+    for(let i = 0; i < regular1.length; i++) {
+        paytotal = Number(paytotal) + Number(regular1[i].checked.value)
+        donaTotalPay.innerHTML = paytotal;
     }
   }
 
@@ -139,4 +153,5 @@ class DonationSelect {
 window.onload = () => {
   DonationApi.getInstance().getApi();
   new DonationSelect();
+  // new totalchange();
 }

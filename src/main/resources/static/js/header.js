@@ -35,9 +35,7 @@ function loadHeader() {
 loadHeader();
 
 for(var i = 0; mainMenuList.length; i++){
-    mainMenuList[i].addEventListener
-    
-    stener('mouseover', function(){
+    mainMenuList[i].addEventListener('mouseover', function(){
         header.style.height = "480px"
     });
 

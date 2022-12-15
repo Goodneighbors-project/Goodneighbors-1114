@@ -18,17 +18,13 @@ public class DonationApi {
     private final DonationService donationService;
     private final UserService userService;
 
-    @GetMapping("/support/{category}")
-    public ResponseEntity<?>  getSupports(@PathVariable String category, int page) throws Exception {
-        return ResponseEntity.ok(new CMRespDto<>("Successfully",donationService.getDonationList(category, page)));
-    }
     @GetMapping("/support")
     public ResponseEntity<?> getList() throws Exception {
         return ResponseEntity.ok().body(new CMRespDto<>("success", donationService.getList()));
     }
 
-    @GetMapping("/user/{userId}")
-    public ResponseEntity<?> getUsers(@PathVariable int userId) throws Exception {
+    @GetMapping("/user")
+    public ResponseEntity<?> getUser(@PathVariable int userId) throws Exception {
         return ResponseEntity.ok(new CMRespDto<>("Successfully", userService.getUser(userId)));
     }
 

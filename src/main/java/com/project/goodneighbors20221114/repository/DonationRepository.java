@@ -11,4 +11,5 @@ import java.util.Map;
 public interface DonationRepository {
 
     public List<DonationCategory> getList()throws Exception;
+
 }
