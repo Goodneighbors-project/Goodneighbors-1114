@@ -19,7 +19,6 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final PrincipalOauth2Service principalOauth2Service;
-    private final AuthenticationSuccessHandler authenticationSuccessHandler;
 
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
@@ -30,15 +29,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.csrf().disable();
         http.httpBasic().disable();
         http.authorizeRequests()
-                .antMatchers("/account/mypage","index")
-                .authenticated().antMatchers("/admin").hasRole("ADMIN")
+                .antMatchers("/account/mypage","index","/payment/support_step1")
+                .authenticated().antMatchers("/admin/**","/api/admin/**").hasRole("ADMIN")
                 .anyRequest().permitAll()
                 .and()
                 .formLogin()
                 .loginPage("/account/login")
                 .loginProcessingUrl("/account/login")
                 .failureHandler(new AuthFailureHandler())
-                .successHandler(authenticationSuccessHandler)
                 .defaultSuccessUrl("/main")
                 .and()
                 .logout()

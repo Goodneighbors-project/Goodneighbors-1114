@@ -24,7 +24,7 @@ public class PrincipalDetails implements UserDetails, OAuth2User {
         this.user = user;
         this.attributes = attributes;
     }
-
+    
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         Collection<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
@@ -64,11 +64,12 @@ public class PrincipalDetails implements UserDetails, OAuth2User {
 
     @Override
     public String getName() {
-        return null;
+        return (String) attributes.get("name");
     }
 
     @Override
     public Map<String, Object> getAttribute(String name ) {
         return attributes;
     }
-}
+
+ }
