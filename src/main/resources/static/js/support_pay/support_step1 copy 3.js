@@ -107,6 +107,7 @@ class ValueSum {
 
   constructor() {
     this.getTotalValue();
+    // this.getInputboxValue();
   }
 
 
@@ -130,7 +131,19 @@ class ValueSum {
     console.log(valueArray)
   }
 
+  // getInputboxValue() {
+  //   const inputValue = document.getElementsByName("regular-input-1");
+    
+  //   for(let i = 0; i < inputValue.lengh; i++) {
+  //     inputValue[i].oninput = ('input', (event) => {
+  //       const donatePay = document.getElementsByName("donationPay");
+  //       donatePay[i].innerHTML = Number(event.target.value * 30000);
+  //       console.log(donatePay)
+  //       })
+  //   }
+  // }
 }
+
 
 window.onload = () => {
   DonationApi.getInstance().getApi();

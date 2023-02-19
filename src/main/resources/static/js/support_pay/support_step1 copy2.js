@@ -1,13 +1,3 @@
-const inputValue = document.getElementsByName("regular-input-1");
-const donatePay = document.getElementsByName("donationPay");
-  for(let i = 0; i < inputValue.lengh; i++) {
-    inputValue[i].addEventListener('input', event);
-  }
-
-  function event(e) {
-    donatePay.innerHTML = Number(e.target.value * 30000);
-  }
-
 class DonationApi {
     static #instance = null;
     static getInstance() {
@@ -109,28 +99,56 @@ class ValueSum {
     this.getTotalValue();
   }
 
-
   getTotalValue() {
+    let inputValue = document.getElementsByName("regular-input-1");
     let checkValue = document.getElementsByName("regular-");
+    let donatePay = document.getElementsByName("donationPay");
     let totalPrice = document.querySelector(".totalPay");
     let valueArray = new Array();
     let totalValue = 0;
 
+    if(inputValue != null) {
+      this.getInputboxValue();
+    }else
+    // if(checkValue.checked) 
+    // {
+    //   this.getCheckboxValue();
+    // }
+    for(let i = 0; i < donatePay.length; i++) {
+      valueArray[i] = donatePay[i].value;
+      totalValue = Number(totalValue) + Number(valueArray[i] * 30000);
+    }
+    totalPrice.innerHTML = Number(totalValue);
+    console.log(valueArray);
+    console.log(donatePay.value);
+  }
+
+  getInputboxValue() {
+    let inputValue = document.getElementsByName("regular-input-1");
+    
+    for(let i = 0; i < inputValue.lengh; i++) {
+      inputValue[i].addEventListener('change', (event) => {
+        const donatePay = document.getElementsByName("donationPay");
+        donatePay[i].innerHTML = Number(event.target.value * 30000);
+        console.log(donatePay[0].value);
+        })
+    }
+  }
+
+  getCheckboxValue() {
+    let donatePay = document.getElementsByName("donationPay");
+    let checkValue = document.getElementsByName("regular-");
+    
     for(let i = 0; i < checkValue.length; i++) {
       checkValue[i].onclick = () => {
         if(checkValue[i].checked) {
           donatePay[parseInt(i/3)].innerText = Number(checkValue[i].value * 30000);
-          valueArray[parseInt(i/3)] = Number(checkValue[i].value);
-
-          totalValue = Number(totalValue) + Number(valueArray[parseInt(i/3)] * 30000);
         }
-        totalPrice.innerHTML = Number(totalValue);
       }
     }
-    console.log(valueArray)
   }
-
 }
+
 
 window.onload = () => {
   DonationApi.getInstance().getApi();

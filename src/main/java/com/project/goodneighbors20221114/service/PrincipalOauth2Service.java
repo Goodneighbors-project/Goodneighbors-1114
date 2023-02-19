@@ -40,18 +40,14 @@ public class PrincipalOauth2Service extends DefaultOAuth2UserService {
         }
 
         return principalDetails;
-//        return oAuth2USerLogin(userRequest, oAuth2User);
     }
 
     private PrincipalDetails getPrincipalDetails(String provider, Map<String, Object> attributes) throws Exception {
 
-
-//    private OAuth2User oAuth2USerLogin(OAuth2UserRequest userRequest, OAuth2User oAuth2User) {
         User user = null;
         Map<String, Object> oauth2Attributes = null;
         String email = null;
 
-//        String provider = userRequest.getClientRegistration().getRegistrationId();
 
         if (provider.equalsIgnoreCase("naver")) {
             oauth2Attributes = (Map<String, Object>) attributes.get("response");
